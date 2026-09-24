@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Closing the Doors BTS</title>
+<meta name="description" content="Everything Amanda changed in the 24 hours after one mentor call: trials off, doors close October 7, all in on the Strategy Audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,500;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Single-theme night sky, the brand. Every colour painted explicitly. */
+:root{
+  --night:#0D0D1A; --night2:#14142A; --panel:#1A1A30; --panel2:#23233F;
+  --lav:#C5B8E8; --violL:#B88CED; --viol:#8B5FC7;
+  --mint:#7EECD4; --mintDeep:#3FBF95;
+  --pink:#E8A0E8; --gold:#E8C36A; --coral:#F08A7A;
+  --txt:#EDEAF6; --txt2:#BDB8D4; --txt3:#8C87A6;
+  --line:rgba(197,184,232,.14); --line2:rgba(197,184,232,.28);
+  --hl:linear-gradient(90deg,var(--violL),var(--pink),var(--mint));
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Space Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;background:var(--night)}
+body{
+  background:
+    radial-gradient(900px 600px at 8% -8%, rgba(139,95,199,.30), transparent 62%),
+    radial-gradient(700px 520px at 96% 6%, rgba(232,160,232,.12), transparent 60%),
+    radial-gradient(800px 600px at 80% 100%, rgba(63,191,149,.08), transparent 62%),
+    var(--night);
+  background-attachment:fixed;
+  color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;margin:0;
+}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px}
+.g{font-family:var(--serif);font-style:italic;font-weight:700;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin:0}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--mint)}
+button{font:inherit;color:inherit}
+input,textarea,select{font:inherit}
+:focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:6px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:56px 36px}
+.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:800;margin-block:16px 16px}
+.hero h1 .g{display:block;font-size:1.06em;line-height:1.05}
+.hero .tag{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,2.7vw,30px);line-height:1.2;color:var(--gold);margin-bottom:16px}
+.hero .lead{font-size:clamp(17px,1.7vw,19.5px);color:var(--txt2);max-width:34em}
+.byline{margin-top:22px;color:var(--txt3);font-size:14.5px;line-height:1.55;max-width:36em}
+.byline b{color:var(--txt);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;border:1px solid var(--line2);background:transparent;cursor:pointer;font-weight:600;font-size:15px;text-decoration:none;color:var(--txt);transition:background .2s,border-color .2s,transform .15s}
+.btn:hover{background:rgba(197,184,232,.08);border-color:var(--lav)}
+.btn.primary{background:var(--txt);color:var(--night);border-color:var(--txt)}
+.btn.primary:hover{background:var(--mint);border-color:var(--mint)}
+.btn.glow{background:linear-gradient(90deg,var(--viol),var(--pink));border-color:transparent;color:#fff;box-shadow:0 10px 30px rgba(139,95,199,.35)}
+.btn.glow:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(217,127,217,.4)}
+.btn kbd{font-family:var(--mono);font-size:11px;padding:2px 6px;border-radius:4px;background:rgba(13,13,26,.12)}
+
+/* countdown door */
+.door-wrap{justify-self:center;width:100%;max-width:400px}
+.door{position:relative;border-radius:28px;padding:30px 28px 26px;border:1px solid var(--line2);
+  background:linear-gradient(160deg,rgba(139,95,199,.28),rgba(26,26,48,.7) 55%,rgba(63,191,149,.10));overflow:hidden}
+.door::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(197,184,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(197,184,232,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.door > *{position:relative}
+.door .kicker{color:var(--lav)}
+.door .big{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(84px,12vw,124px);line-height:.9;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;margin-top:10px;font-variant-numeric:lining-nums}
+.door .unit{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt);margin-top:4px}
+.door .date{margin-top:16px;color:var(--txt2);font-size:15px;line-height:1.5}
+.door .date b{color:var(--gold);font-weight:600}
+.stars{position:absolute;inset:0;pointer-events:none}
+.stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.5;animation:tw 3.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:.9;transform:scale(1.2)}}
+
+/* ---------- tally ---------- */
+.tally{display:flex;flex-wrap:wrap;border:1px solid var(--line2);border-radius:22px;overflow:hidden;background:rgba(26,26,48,.55);margin-bottom:44px}
+.tally div{flex:1 1 150px;padding:18px 18px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0;display:flex;flex-direction:column;gap:2px}
+.tally b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(36px,4vw,50px);line-height:1;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;font-variant-numeric:lining-nums}
+.tally span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt);margin-top:6px}
+.tally small{font-size:13px;color:var(--txt3);line-height:1.35}
+
+/* ---------- sticky nav ---------- */
+.snav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(13,13,26,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.snav .wrap{display:flex;align-items:center;gap:12px}
+.snav-scroll{display:flex;gap:4px;overflow-x:auto;padding-block:10px;scrollbar-width:none;flex:1;min-width:0}
+.snav-scroll::-webkit-scrollbar{display:none}
+.snav a{flex:none;display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;text-decoration:none;color:var(--txt2);font-size:13px;border:1px solid transparent;white-space:nowrap}
+.snav a i{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--lav)}
+.snav a:hover{color:var(--txt);border-color:var(--line2)}
+.snav a.cur{color:var(--night);background:var(--lav)}
+.snav a.cur i{color:var(--night)}
+.snav .shot-open{flex:none;padding:7px 14px;font-size:13px}
+
+/* ---------- sections ---------- */
+.sec{padding-block:64px;border-bottom:1px solid var(--line);scroll-margin-top:62px}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;margin-bottom:30px}
+.big-n{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(66px,9vw,108px);line-height:.82;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;width:1.3em;text-align:center;padding-right:.06em}
+.sec-lbl{display:block;font-family:var(--mono);font-size:11px;color:var(--txt3);letter-spacing:.16em;margin-top:12px;text-align:center;text-transform:uppercase}
+.sec h2{font-size:clamp(27px,3.6vw,44px);font-weight:700;line-height:1.08;margin-block:10px 14px}
+.sec .runs{color:var(--txt2);font-size:16.5px;max-width:40em}
+.sec .runs + .runs{margin-top:12px}
+.pull{margin-top:20px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(21px,2.4vw,28px);line-height:1.25;color:var(--gold);max-width:22em}
+.note{margin-top:18px;color:var(--txt3);font-size:14px;max-width:52em}
+
+/* ---------- the call: focus widget ---------- */
+.call{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.quote{border-left:2px solid var(--pink);padding-left:18px;margin-top:20px}
+.quote p{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(19px,2vw,23px);line-height:1.3;color:var(--txt)}
+.quote small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3);margin-top:8px}
+.focus{border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55)}
+.focus-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.focus-top h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav);font-weight:700}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:999px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;padding:6px 14px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:600;color:var(--txt2)}
+.seg button[aria-pressed="true"]{background:var(--lav);color:var(--night)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.fi{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(35,35,63,.5);font-size:14px;color:var(--txt2);transition:opacity .35s,border-color .35s,background .35s,transform .35s}
+.fi b{display:block;color:var(--txt);font-weight:600;font-size:14px}
+.fi small{display:block;color:var(--txt3);font-size:12.5px;line-height:1.35}
+.focus[data-mode="one"] .fi:not(.one){opacity:.22;transform:scale(.98)}
+.focus[data-mode="one"] .fi.one{border-color:var(--mint);background:linear-gradient(150deg,rgba(63,191,149,.2),rgba(35,35,63,.5) 70%);box-shadow:0 0 0 1px rgba(126,236,212,.25),0 12px 30px rgba(63,191,149,.15)}
+.focus-read{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}
+.focus-read b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:38px;line-height:1;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+.focus-read span{color:var(--txt2);font-size:14.5px;max-width:26em}
+
+/* ---------- changelog ---------- */
+.log-tools{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{border:1px solid var(--line2);background:transparent;padding:6px 13px;border-radius:999px;cursor:pointer;font-size:13px;color:var(--txt2)}
+.filters button[aria-pressed="true"]{background:var(--lav);color:var(--night);border-color:var(--lav)}
+.mine{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--txt2)}
+.mine .sw{width:44px;height:24px;border-radius:999px;border:1px solid var(--line2);background:rgba(35,35,63,.7);position:relative;cursor:pointer;padding:0}
+.mine .sw::after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:var(--txt3);transition:left .2s,background .2s}
+.mine .sw[aria-checked="true"]{background:rgba(63,191,149,.35);border-color:var(--mint)}
+.mine .sw[aria-checked="true"]::after{left:23px;background:var(--mint)}
+.prog{height:8px;border-radius:999px;background:rgba(35,35,63,.8);overflow:hidden;margin-bottom:22px;border:1px solid var(--line)}
+.prog i{display:block;height:100%;width:0;background:var(--hl);transition:width .35s}
+.prog-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px;display:flex;justify-content:space-between}
+.area{margin-top:26px}
+.area h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.area h3 i{font-style:normal;color:var(--txt3);font-weight:400;letter-spacing:.1em}
+.items{display:grid;gap:8px}
+.it{border:1px solid var(--line);border-radius:16px;background:rgba(26,26,48,.5);overflow:hidden;transition:border-color .2s}
+.it:hover{border-color:var(--line2)}
+.it-row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:14px 16px;cursor:pointer;width:100%;background:transparent;border:0;text-align:left}
+.box{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--txt3);margin-top:3px;position:relative;transition:background .2s,border-color .2s}
+.it[data-checked="true"] .box{background:var(--mintDeep);border-color:var(--mintDeep)}
+.it[data-checked="true"] .box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border-right:2px solid var(--night);border-bottom:2px solid var(--night);transform:rotate(42deg)}
+.it-row b{display:block;font-weight:600;color:var(--txt);line-height:1.35}
+.it-row small{display:block;color:var(--txt3);font-size:13.5px;line-height:1.45;margin-top:3px}
+.badge{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--line2);color:var(--txt2);margin-top:4px;white-space:nowrap}
+.badge.done{color:var(--mint);border-color:rgba(126,236,212,.4)}
+.badge.live{color:var(--gold);border-color:rgba(232,195,106,.45)}
+.badge.broke{color:var(--coral);border-color:rgba(240,138,122,.45)}
+.badge.next{color:var(--lav);border-color:rgba(197,184,232,.4)}
+.it-more{display:none;padding:0 16px 16px 50px;color:var(--txt2);font-size:14.5px;line-height:1.55}
+.it[data-open="true"] .it-more{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.it-more div{padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(35,35,63,.45)}
+.it-more div h4{margin:0 0 4px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.it-more .why h4{color:var(--pink)} .it-more .yours h4{color:var(--mint)}
+.mine-on .badge{display:none}
+.it[hidden]{display:none}
+
+/* ---------- ladder ---------- */
+.ladder{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:8px}
+.rung{border:1px solid var(--line);border-radius:18px;padding:16px 16px 14px;background:rgba(26,26,48,.55);cursor:pointer;text-align:left;transition:border-color .2s,transform .2s,background .2s;position:relative}
+.rung:hover{border-color:var(--line2);transform:translateY(-2px)}
+.rung[aria-pressed="true"]{border-color:var(--lav);background:linear-gradient(160deg,rgba(139,95,199,.3),rgba(26,26,48,.55) 70%)}
+.rung .rn{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3)}
+.rung .rp{font-family:var(--serif);font-style:italic;font-weight:700;font-size:30px;line-height:1;margin-top:6px;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.08em}
+.rung .rt{display:block;font-weight:600;margin-top:6px;line-height:1.3;font-size:14.5px}
+.rung .rs{display:block;color:var(--txt3);font-size:12.5px;line-height:1.35;margin-top:3px}
+.rung .new{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--night);background:var(--mint);padding:2px 7px;border-radius:999px}
+.rung-detail{margin-top:16px;border:1px solid var(--line2);border-radius:18px;padding:20px 22px;background:rgba(35,35,63,.5);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.rung-detail h3{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:8px}
+.rung-detail .job h3{color:var(--pink)} .rung-detail .how h3{color:var(--mint)}
+.rung-detail p{color:var(--txt2);font-size:14.5px}
+.rung-detail a{font-weight:600}
+
+/* ---------- receipt ---------- */
+.receipt{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.steps{display:grid;gap:10px;margin-top:20px}
+.step{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.step i{font-family:var(--mono);font-style:normal;font-size:11px;letter-spacing:.14em;color:var(--lav);padding-top:4px;white-space:nowrap}
+.step b{display:block;font-weight:600;color:var(--txt)}
+.step span{display:block;color:var(--txt3);font-size:13.5px;line-height:1.45;margin-top:2px}
+.gap{border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55)}
+.gap-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.gap-top h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav);font-weight:700}
+.gap svg{width:100%;height:auto;display:block;overflow:visible}
+.gap .gl{font-family:var(--mono);font-size:11px;fill:var(--txt3);letter-spacing:.1em}
+.gap .gp{font-family:var(--serif);font-style:italic;font-weight:700;font-size:22px;fill:var(--txt)}
+.gap .gx{font-family:var(--serif);font-style:italic;font-weight:700;font-size:44px;fill:var(--coral)}
+.gap .gx.ok{fill:var(--mint)}
+.gap-read{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);color:var(--txt2);font-size:14.5px}
+.gap-read b{color:var(--txt)}
+
+/* ---------- stories ---------- */
+.buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:6px}
+.bk{border-radius:18px;padding:20px 22px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.bk h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:10px;color:var(--mint)}
+.bk p{color:var(--txt2);font-size:14.5px}
+.bk ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.bk li{position:relative;padding-left:18px;color:var(--txt2);font-size:14px}
+.bk li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--viol)}
+.gen{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:34px;align-items:start}
+.form{border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55);display:grid;gap:14px}
+.form h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav);font-weight:700}
+.form label{display:grid;gap:6px;font-size:13px;color:var(--txt3)}
+.form input,.form textarea,.form select{width:100%;border:1px solid var(--line2);background:rgba(13,13,26,.6);color:var(--txt);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.form textarea{resize:vertical;min-height:58px}
+.form select{appearance:none;-webkit-appearance:none}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form .hint{font-size:12.5px;color:var(--txt3);line-height:1.45}
+.preview{display:grid;justify-items:center;gap:12px}
+.preview .cap{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3)}
+
+/* the 9:16 story card */
+.scard{aspect-ratio:9/16;width:100%;max-width:360px;border-radius:22px;border:1px solid var(--line2);overflow:hidden;position:relative;display:flex;flex-direction:column;padding:clamp(18px,7cqw,44px);container-type:inline-size;
+  background:radial-gradient(120% 70% at 10% 0%,rgba(139,95,199,.55),transparent 55%),radial-gradient(100% 60% at 100% 100%,rgba(63,191,149,.28),transparent 60%),radial-gradient(90% 50% at 90% 10%,rgba(232,160,232,.22),transparent 60%),var(--night2)}
+.scard::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(197,184,232,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(197,184,232,.05) 1px,transparent 1px);background-size:9cqw 9cqw;pointer-events:none}
+.scard > *{position:relative}
+.scard .sk{font-family:var(--mono);font-size:clamp(9px,3cqw,12px);letter-spacing:.24em;text-transform:uppercase;color:var(--pink)}
+.scard h3{font-family:var(--sans);font-weight:800;font-size:clamp(22px,8.2cqw,34px);line-height:1.05;margin-top:2cqw;letter-spacing:-.02em}
+.scard h3 em{font-family:var(--serif);font-style:italic;font-weight:700;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+.scard .wins{flex:1;display:flex;flex-direction:column;justify-content:center;gap:3cqw;min-height:0;margin-block:4cqw}
+.scard .w{padding:3.6cqw 4cqw;border-radius:4cqw;border:1px solid var(--line2);background:rgba(13,13,26,.45)}
+.scard .w p{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(13px,4.6cqw,19px);line-height:1.25;color:var(--txt)}
+.scard .w small{display:block;font-family:var(--mono);font-size:clamp(8px,2.7cqw,11px);letter-spacing:.16em;text-transform:uppercase;color:var(--mint);margin-top:2cqw}
+.scard .w:empty{display:none}
+.scard .cta{border-top:1px solid var(--line2);padding-top:4cqw;display:flex;justify-content:space-between;align-items:flex-end;gap:3cqw}
+.scard .cta b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(15px,5.4cqw,22px);line-height:1.15;color:var(--gold);max-width:60%}
+.scard .cta span{font-family:var(--mono);font-size:clamp(8px,2.6cqw,11px);letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);text-align:right}
+.scard .arrow{display:inline-block;margin-top:2cqw;font-family:var(--mono);font-size:clamp(9px,3cqw,12px);letter-spacing:.2em;text-transform:uppercase;color:var(--night);background:var(--mint);padding:1.8cqw 3.4cqw;border-radius:999px}
+
+/* ---------- worksheet ---------- */
+.ws{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin-top:8px}
+.ws .form textarea{min-height:70px}
+.commit{border:1px solid var(--line2);border-radius:22px;padding:26px;background:linear-gradient(160deg,rgba(139,95,199,.25),rgba(26,26,48,.6) 60%);position:relative;overflow:hidden}
+.commit .kicker{color:var(--lav)}
+.commit p.big{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(20px,2.3vw,26px);line-height:1.3;color:var(--txt);margin-top:12px;min-height:5em}
+.commit p.big b{color:var(--gold);font-weight:700}
+.commit .tools{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.commit .ok{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint);align-self:center}
+.birds{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:26px}
+.bird{padding:18px 20px;border-radius:16px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.bird i{display:block;font-family:var(--mono);font-style:normal;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.bird b{display:block;font-weight:600;line-height:1.35}
+.bird p{color:var(--txt3);font-size:13.5px;margin-top:4px;line-height:1.45}
+
+/* ---------- accountability + cta ---------- */
+.hold{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:stretch}
+.streak{border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55)}
+.streak h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px}
+.streak p{color:var(--txt2);font-size:14.5px}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:16px}
+.day{aspect-ratio:1;border-radius:10px;border:1px solid var(--line);background:rgba(35,35,63,.5);display:grid;place-items:center;font-family:var(--mono);font-size:11px;color:var(--txt3);cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.day[aria-pressed="true"]{background:var(--mintDeep);border-color:var(--mintDeep);color:var(--night);font-weight:700}
+.day.past{opacity:.35;cursor:default}
+.day.today{border-color:var(--gold);color:var(--gold)}
+.streak-read{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--txt2)}
+.streak-read b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:26px;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+
+.cta{border-radius:26px;padding:34px 30px;border:1px solid var(--line2);position:relative;overflow:hidden;
+  background:linear-gradient(150deg,rgba(139,95,199,.35),rgba(26,26,48,.75) 50%,rgba(63,191,149,.15))}
+.cta::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(197,184,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(197,184,232,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.cta > *{position:relative}
+.cta .kicker{color:var(--lav)}
+.cta h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;line-height:1.08;margin-block:10px 12px}
+.cta p{color:var(--txt2);max-width:38em;font-size:16px}
+.cta .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:24px}
+.path{display:block;text-decoration:none;color:var(--txt);border:1px solid var(--line2);border-radius:18px;padding:18px 20px;background:rgba(13,13,26,.45);transition:border-color .2s,transform .2s}
+.path:hover{border-color:var(--mint);transform:translateY(-2px)}
+.path i{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.path b{display:block;font-weight:700;font-size:17px;line-height:1.25}
+.path span{display:block;color:var(--txt3);font-size:13.5px;margin-top:6px;line-height:1.45}
+.path em{display:inline-block;margin-top:12px;font-style:normal;font-weight:600;color:var(--mint);font-size:14px}
+.cta .sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);margin-top:18px}
+
+footer{padding:34px 0 46px;color:var(--txt3);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--lav);text-decoration:none}
+
+/* ---------- screenshot mode ---------- */
+.shot{position:fixed;inset:0;z-index:100;background:rgba(13,13,26,.97);display:flex;flex-direction:column;gap:14px;padding:18px 20px}
+.shot-top{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1100px;width:100%;margin:0 auto;flex-wrap:wrap}
+.shot-top .kicker{color:var(--txt3)}
+.shot-tools{display:flex;gap:8px;flex-wrap:wrap}
+.shot-tools .btn{padding:8px 14px;font-size:13px}
+.shot-stage{flex:1;min-height:0;display:grid;place-items:center}
+.shot-stage .scard{max-width:min(420px,calc((100vh - 150px) * 9 / 16));height:auto}
+.shot-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;max-width:1100px;width:100%;margin:0 auto}
+.shot-count{font-family:var(--mono);font-size:12px;color:var(--txt3);font-variant-numeric:tabular-nums}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .hero,.call,.receipt,.gen,.ws,.hold,.rung-detail{grid-template-columns:1fr}
+  .hero{padding-block:36px 26px;gap:26px}
+  .door-wrap{max-width:100%}
+  .sec{padding-block:44px}
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .big-n{width:auto;text-align:left;font-size:56px}
+  .sec-lbl{text-align:left;margin-top:4px}
+  .it-more{padding-left:16px}
+  .it[data-open="true"] .it-more{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .snav .shot-open{display:none}
+  .form .row2{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="wrap hero">
+  <div>
+    <p class="kicker">Behind the scenes · September 24, 2026</p>
+    <h1>I turned off <span class="g">free trials.</span></h1>
+    <p class="tag">And I'm going all in on the one thing my numbers keep pointing at.</p>
+    <p class="lead">One call with my mentor yesterday. Twenty-four hours later, this is every single thing I changed, including the one that broke. Doors to Spiritual Business Skool close October 7. I'm documenting the whole run so you can steal the parts that fit your design.</p>
+    <p class="byline"><b>The 7-day trial converted at 52%.</b> I loved it. It's gone. If you've been here a while you know this is how I work: I test it in public, I show the receipts, and when the numbers say move, I move. Cowboy testing.</p>
+    <div class="actions">
+      <a class="btn primary" href="#log">Walk the 24 hours</a>
+      <button class="btn" type="button" data-shot="0">Story card templates <kbd>S</kbd></button>
+    </div>
+  </div>
+  <div class="door-wrap">
+    <div class="door" aria-live="polite">
+      <div class="stars" aria-hidden="true">
+        <i style="left:12%;top:18%"></i><i style="left:78%;top:12%;animation-delay:.8s"></i><i style="left:88%;top:44%;animation-delay:1.6s"></i>
+        <i style="left:22%;top:72%;animation-delay:2.2s"></i><i style="left:60%;top:84%;animation-delay:1.1s"></i><i style="left:40%;top:8%;animation-delay:2.8s"></i>
+      </div>
+      <p class="kicker">Doors close in</p>
+      <div class="big num" id="cdNum">13</div>
+      <div class="unit" id="cdUnit">days</div>
+      <p class="date">Spiritual Business Skool closes to new members on <b>October 7, 2026</b>. No trial. No "I'll join next month." The people who are in are in.</p>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="tally" aria-label="The run at a glance">
+    <div><b class="num">24</b><span>hours</span><small>From the mentor call to this page</small></div>
+    <div><b class="num">1</b><span>call</span><small>One question changed the whole plan</small></div>
+    <div><b class="num">19</b><span>changes</span><small>16 done or in motion, 2 queued, 1 broke. I&#39;m telling you which</small></div>
+    <div><b class="num" id="cdTally">13</b><span>days left</span><small>Until the doors close on October 7</small></div>
+  </div>
+</section>
+
+<!-- ================= NAV ================= -->
+<nav class="snav" aria-label="Sections">
+  <div class="wrap">
+    <div class="snav-scroll">
+      <a href="#call"><i>01</i>The call</a>
+      <a href="#log"><i>02</i>The 24 hours</a>
+      <a href="#ladder"><i>03</i>The offer map</a>
+      <a href="#receipt"><i>04</i>The receipt</a>
+      <a href="#stories"><i>05</i>Stories</a>
+      <a href="#yours"><i>06</i>Your version</a>
+      <a href="#hold"><i>07</i>Hold me to it</a>
+    </div>
+    <button class="btn shot-open" type="button" data-shot="0">Story cards</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================= 01 THE CALL ================= -->
+<section class="sec" id="call">
+  <div class="sec-head">
+    <div><div class="big-n">01</div><span class="sec-lbl">The call</span></div>
+    <div>
+      <p class="kicker">What actually happened</p>
+      <h2>If you're prioritizing everything, <span class="g">you're prioritizing nothing.</span></h2>
+      <p class="runs">I went into the call with a list. Things I could add to the strategy audits. Ways to improve them, increase them, bolt more onto them. My mentor took one look at the numbers and said something I already knew and hadn't acted on.</p>
+    </div>
+  </div>
+  <div class="call">
+    <div>
+      <div class="quote">
+        <p>"This is a dope-ass strategy. This is your unique mechanism. I haven't seen anyone doing it like this, and your numbers don't lie."</p>
+        <small>Her, about the audits</small>
+      </div>
+      <div class="quote">
+        <p>"Yeah, you could do all of those things. But you're trying to do everything, so you're doing nothing. The quality of your questions directs the quality of your focus."</p>
+        <small>Her, about my list</small>
+      </div>
+      <p class="pull">I built the Spiritual Business Coach AI on August 17 and it told me the same thing. The audits were already the thing that worked. I just hadn't made them the main thing.</p>
+      <p class="note">So the new direction is not a new offer. It's the same audit, the same $222, the same 60 minutes. What changed is that everything else now points at it. Being known for one thing beats being available for ten.</p>
+    </div>
+    <div class="focus" id="focus" data-mode="all">
+      <div class="focus-top">
+        <h3>My to-do list, before and after</h3>
+        <div class="seg" role="group" aria-label="Focus mode">
+          <button type="button" data-mode="all" aria-pressed="true">Everything</button>
+          <button type="button" data-mode="one" aria-pressed="false">One thing</button>
+        </div>
+      </div>
+      <div class="fgrid">
+        <div class="fi"><b>2 to 3x the ad spend</b><small>Volume was never the constraint</small></div>
+        <div class="fi"><b>Build ManyChat automations</b><small>Account too new. It broke anyway</small></div>
+        <div class="fi"><b>Another free gem</b><small>I have eleven already</small></div>
+        <div class="fi"><b>More classrooms</b><small>All 18 are built and complete</small></div>
+        <div class="fi one"><b>The Strategy Audit</b><small>The thing the numbers point at. 60 min, 1:1, ~33% close</small></div>
+        <div class="fi"><b>A new mid-tier offer</b><small>VIP already fixed the gap</small></div>
+        <div class="fi"><b>Weekly YouTube plus daily TikTok plus IG</b><small>Repurpose handles two of those</small></div>
+        <div class="fi"><b>Improve the audit page, the intake, the follow-up</b><small>Polish is a maybe. A maybe is a no</small></div>
+      </div>
+      <div class="focus-read">
+        <b id="focusNum">8</b><span id="focusTxt">things on the list. Zero I'm known for. Every one of them is a good idea, which is exactly the problem.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 02 THE 24 HOURS ================= -->
+<section class="sec" id="log">
+  <div class="sec-head">
+    <div><div class="big-n">02</div><span class="sec-lbl">The 24 hours</span></div>
+    <div>
+      <p class="kicker">The changelog</p>
+      <h2>Everything I touched, <span class="g">in the order I touched it.</span></h2>
+      <p class="runs">Tap any line for why I did it and what your version looks like. Flip <b>Make it mine</b> and the whole list becomes a blank checklist for your own closing-doors run, with a progress bar. That's the template.</p>
+    </div>
+  </div>
+
+  <div class="log-tools">
+    <div class="filters" role="group" aria-label="Filter by area">
+      <button type="button" data-area="all" aria-pressed="true">All</button>
+      <button type="button" data-area="skool" aria-pressed="false">Skool</button>
+      <button type="button" data-area="ig" aria-pressed="false">Instagram</button>
+      <button type="button" data-area="book" aria-pressed="false">Booking</button>
+      <button type="button" data-area="dm" aria-pressed="false">Content &amp; DMs</button>
+    </div>
+    <div class="mine">
+      <span id="mineLbl">Make it mine</span>
+      <button class="sw" type="button" role="switch" aria-checked="false" aria-labelledby="mineLbl" id="mineSw"></button>
+    </div>
+  </div>
+  <div class="prog-lbl"><span id="progLbl">Amanda's run · 18 of 19 landed</span><span class="num" id="progPct">95%</span></div>
+  <div class="prog" aria-hidden="true"><i id="progBar" style="width:95%"></i></div>
+
+  <div id="logList"></div>
+  <p class="note">The one that broke stays on the list on purpose. Two to three hours building a ManyChat flow my account can't run yet. That's the cost of cowboy testing and it's still cheaper than not testing.</p>
+</section>
+
+<!-- ================= 03 OFFER MAP ================= -->
+<section class="sec" id="ladder">
+  <div class="sec-head">
+    <div><div class="big-n">03</div><span class="sec-lbl">The offer map</span></div>
+    <div>
+      <p class="kicker">Where every door leads now</p>
+      <h2>Same ladder. <span class="g">Every rung now points at the audit.</span></h2>
+      <p class="runs">Tap a rung to see the job it does. The two new doorways are the open audit link and the Custom 30-Day Content Plan. Both are bookable by people who have never set foot in this community, which was the bottleneck I didn't see.</p>
+    </div>
+  </div>
+  <div class="ladder" id="ladderGrid"></div>
+  <div class="rung-detail" id="rungDetail">
+    <div class="job"><h3>The job</h3><p id="rdJob"></p></div>
+    <div class="how"><h3>How it works now</h3><p id="rdHow"></p></div>
+  </div>
+</section>
+
+<!-- ================= 04 THE RECEIPT ================= -->
+<section class="sec" id="receipt">
+  <div class="sec-head">
+    <div><div class="big-n">04</div><span class="sec-lbl">The receipt</span></div>
+    <div>
+      <p class="kicker">Why I trust this direction</p>
+      <h2>The AI told me I had a money model problem. <span class="g">It was right.</span></h2>
+      <p class="runs">I built the Spiritual Business Coach AI on August 17 because I was sure my constraint was volume. More views, more ad spend, more people at the top. It read the numbers and disagreed with me.</p>
+    </div>
+  </div>
+  <div class="receipt">
+    <div>
+      <div class="steps">
+        <div class="step"><i>AUG 17</i><div><b>Built the coach on my own data</b><span>Member exports, ad spend, tier mix, the lot. Then asked it what was stopping $10K by Christmas.</span></div></div>
+        <div class="step"><i>WHAT I SAID</i><div><b>"My constraint is volume."</b><span>I wanted permission to 2x or 3x the ad budget.</span></div></div>
+        <div class="step"><i>WHAT IT SAID</i><div><b>"You have plenty of volume. Even at 3x spend you don't hit $10K."</b><span>The jump from Premium to 1:1 was 30x with nothing in between. Money model, not traffic.</span></div></div>
+        <div class="step"><i>WHAT I DID</i><div><b>Launched VIP at $333</b><span>A real rung between Premium and the $997 1:1. Raised the floor to $33 while I was at it.</span></div></div>
+        <div class="step"><i>30 DAYS LATER</i><div><b>MRR up 53% on half the ad spend</b><span>Average revenue per member went from $7.78 to $13.10. Upgrades now out-earn new members 3.6 to 1.</span></div></div>
+      </div>
+      <p class="pull">Numbers prove a mechanism. They are never the flex. The mechanism here is: ask a better question and the answer stops being "spend more."</p>
+      <p class="note">Coming to the VIP Vault: a rebuilt version of the coach, trained on everything I've learned since. Limited-time bonus for joining VIP before the doors close.</p>
+    </div>
+    <div class="gap" id="gap" data-mode="before">
+      <div class="gap-top">
+        <h3>The gap in the ladder</h3>
+        <div class="seg" role="group" aria-label="Before or after">
+          <button type="button" data-gap="before" aria-pressed="true">August 16</button>
+          <button type="button" data-gap="after" aria-pressed="false">Today</button>
+        </div>
+      </div>
+      <svg viewBox="0 0 420 300" aria-labelledby="gapTitle" role="img">
+        <title id="gapTitle">Price ladder before and after adding the VIP tier</title>
+        <g id="gapBefore">
+          <rect x="30" y="230" width="80" height="40" rx="8" fill="rgba(35,35,63,.9)" stroke="rgba(197,184,232,.3)"/>
+          <text x="70" y="255" text-anchor="middle" class="gp">$33</text>
+          <text x="70" y="290" text-anchor="middle" class="gl">PREMIUM</text>
+          <rect x="310" y="30" width="80" height="40" rx="8" fill="rgba(35,35,63,.9)" stroke="rgba(197,184,232,.3)"/>
+          <text x="350" y="55" text-anchor="middle" class="gp">$997</text>
+          <text x="350" y="90" text-anchor="middle" class="gl">1:1</text>
+          <path d="M110 250 C 200 250, 230 50, 310 50" fill="none" stroke="rgba(240,138,122,.7)" stroke-width="2" stroke-dasharray="5 6"/>
+          <text x="205" y="160" text-anchor="middle" class="gx">30x</text>
+          <text x="205" y="185" text-anchor="middle" class="gl">NOTHING IN BETWEEN</text>
+        </g>
+        <g id="gapAfter" style="display:none">
+          <rect x="30" y="230" width="80" height="40" rx="8" fill="rgba(35,35,63,.9)" stroke="rgba(197,184,232,.3)"/>
+          <text x="70" y="255" text-anchor="middle" class="gp">$55</text>
+          <text x="70" y="290" text-anchor="middle" class="gl">PREMIUM</text>
+          <rect x="170" y="130" width="80" height="40" rx="8" fill="rgba(63,191,149,.25)" stroke="rgba(126,236,212,.7)"/>
+          <text x="210" y="155" text-anchor="middle" class="gp">$333</text>
+          <text x="210" y="190" text-anchor="middle" class="gl">VIP · NEW</text>
+          <rect x="310" y="30" width="80" height="40" rx="8" fill="rgba(35,35,63,.9)" stroke="rgba(197,184,232,.3)"/>
+          <text x="350" y="55" text-anchor="middle" class="gp">$997</text>
+          <text x="350" y="90" text-anchor="middle" class="gl">1:1</text>
+          <path d="M110 250 L170 150" fill="none" stroke="rgba(126,236,212,.7)" stroke-width="2"/>
+          <path d="M250 150 L310 50" fill="none" stroke="rgba(126,236,212,.7)" stroke-width="2"/>
+          <text x="118" y="150" text-anchor="end" class="gx ok" style="font-size:26px">6x</text>
+          <text x="300" y="120" text-anchor="end" class="gx ok" style="font-size:26px">3x</text>
+        </g>
+      </svg>
+      <p class="gap-read" id="gapRead"><b>Before:</b> a member who loved Premium had nowhere to go except a 30x jump. Most people don't jump 30x. They just stay, or they leave.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 STORIES ================= -->
+<section class="sec" id="stories">
+  <div class="sec-head">
+    <div><div class="big-n">05</div><span class="sec-lbl">Stories</span></div>
+    <div>
+      <p class="kicker">The part that's new for me</p>
+      <h2>Every time I post to stories, <span class="g">I make money.</span></h2>
+      <p class="runs">So naturally I stopped doing it and started reposting reels instead. That ends now. Daily stories until October 7. I don't do well with a rigid plan, so instead of a calendar I have three buckets and a template.</p>
+    </div>
+  </div>
+  <div class="buckets">
+    <div class="bk"><h3>01 · Client wins</h3><p>VIP, Strategy Audit, and 30-Day Content Plan wins, each sorted into its own highlight. Two or three from the same category on one card, booking link on the sticker.</p><ul><li>"Work With Me" highlight holds all three</li><li>Newest one: a content plan TikTok at 200K views and 20K likes</li><li>Every card ends with "limited availability, book here"</li><li>Bio CTA now reads "Book your audit"</li></ul></div>
+    <div class="bk"><h3>02 · What's coming up</h3><p>Doors closing. Open audit spots. The content plan. The VIP bonus. Whatever's live this week gets a story, not just a post in here.</p><ul><li>Countdown to October 7</li><li>How many audit spots are left</li><li>Behind the scenes of this exact run</li></ul></div>
+    <div class="bk"><h3>03 · Insights from calls</h3><p>One thing I said on a group call or a 1:1 that made someone's face change. Screenshot the slide, say the line, move on.</p><ul><li>Premium Q&amp;A takeaways</li><li>VIP group call moments</li><li>Expat Life stays. It's my life and it has to be in alignment</li></ul></div>
+  </div>
+
+  <div class="gen">
+    <div class="form" id="cardForm">
+      <h3>Story card template · make yours</h3>
+      <label>Category
+        <select id="fCat">
+          <option value="audit">Strategy Audit wins</option>
+          <option value="vip">VIP wins</option>
+          <option value="plan">30-Day Content Plan</option>
+          <option value="own">My own category</option>
+        </select>
+      </label>
+      <label>Headline <input id="fHead" value="What happens on a Strategy Audit"></label>
+      <label>Win one <textarea id="fW1">"My 1:1 with Amanda was INCREDIBLE!! Huge eye-opening breakthrough."</textarea></label>
+      <label>Name one <input id="fN1" value="Luana · Spirits"></label>
+      <label>Win two <textarea id="fW2">"I had a call with Amanda last night with a half-built community that is growing really quickly but not a lot of upgrades were happening."</textarea></label>
+      <label>Name two <input id="fN2" value="Tara"></label>
+      <label>Win three <textarea id="fW3">"I was feeling a little lost and confused. It was so helpful!"</textarea></label>
+      <label>Name three <input id="fN3" value="Lexie"></label>
+      <div class="row2">
+        <label>CTA line <input id="fCta" value="Limited availability. Book here."></label>
+        <label>Handle <input id="fHandle" value="@amandafielding.smith"></label>
+      </div>
+      <p class="hint">Leave a win blank and the card drops it. Open screenshot mode, hit fullscreen, and screenshot it at 9:16. Add the booking link as a story sticker on top.</p>
+      <div class="actions" style="margin-top:2px">
+        <button class="btn primary" type="button" data-shot="custom">Open in screenshot mode</button>
+        <button class="btn" type="button" id="fReset">Reset to my example</button>
+      </div>
+    </div>
+    <div class="preview">
+      <p class="cap">Live preview · 1080 × 1920</p>
+      <div class="scard" id="cardPreview"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 YOUR VERSION ================= -->
+<section class="sec" id="yours">
+  <div class="sec-head">
+    <div><div class="big-n">06</div><span class="sec-lbl">Your version</span></div>
+    <div>
+      <p class="kicker">Two birds, one stone</p>
+      <h2>Do the thing you had to do anyway. <span class="g">Document it. That's the content.</span></h2>
+      <p class="runs">This is what I told you in the Visibility Challenge. Whenever you do something in your community, document the journey. Whenever you create a deliverable, templatize it. I'm doing it in front of you because a community owner has to be the role model, or none of this works.</p>
+    </div>
+  </div>
+  <div class="birds">
+    <div class="bird"><i>Bird one</i><b>The work</b><p>I have to close the doors, open the audit link, and post daily stories anyway. That's growth work, not content work.</p></div>
+    <div class="bird"><i>Bird two</i><b>The content</b><p>This page, the Loom, the classroom, the story cards. Every one of them is the work, filmed. Zero extra creation time.</p></div>
+    <div class="bird"><i>The stone</i><b>The template</b><p>The checklist above, the story card, and the worksheet here. Your run is different from mine. The shape is the same.</p></div>
+  </div>
+  <div class="ws">
+    <div class="form">
+      <h3>Three questions before you go all in</h3>
+      <label>What do your numbers say is already working? Not what you like. What pays.
+        <textarea id="q1" placeholder="e.g. My readings sell every time I post a client message. The course never has."></textarea></label>
+      <label>What would you have to stop doing to go all in on it?
+        <textarea id="q2" placeholder="e.g. Building a third freebie. Posting in four places."></textarea></label>
+      <label>What's the deadline, and what closes on that date?
+        <input id="q3" placeholder="e.g. October 31. The founding rate ends."></label>
+      <p class="hint">Nothing here is saved anywhere. Copy your line and post it in the comments so I can hold you to it too.</p>
+    </div>
+    <div class="commit">
+      <p class="kicker">Your one-line commitment</p>
+      <p class="big" id="commitTxt">Fill in the three questions and your commitment writes itself here.</p>
+      <div class="tools">
+        <button class="btn primary" type="button" id="copyCommit">Copy it</button>
+        <span class="ok" id="copyOk" hidden>Copied</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 07 HOLD ME TO IT + CTA ================= -->
+<section class="sec" id="hold" style="border-bottom:0">
+  <div class="sec-head">
+    <div><div class="big-n">07</div><span class="sec-lbl">Hold me to it</span></div>
+    <div>
+      <p class="kicker">Accountability, in public</p>
+      <h2>Daily stories <span class="g">until the doors close.</span></h2>
+      <p class="runs">I'm sharing all of this because I need you to hold me accountable, especially to the stories. It's the one thing on the list that's new muscle for me. If a day goes by with nothing on my story, call me out in the comments.</p>
+    </div>
+  </div>
+  <div class="hold">
+    <div class="streak">
+      <h3>September 24 to October 7</h3>
+      <p>Tap a day when you see a story from me. Or use it for your own streak. It resets when you close the page, which is the point: the streak lives on Instagram, not in here.</p>
+      <div class="days" id="days"></div>
+      <p class="streak-read"><b class="num" id="streakN">0</b> <span id="streakTxt">of 14 days posted</span></p>
+    </div>
+    <div class="cta">
+      <p class="kicker">Three doors, one deadline</p>
+      <h2>October 7. <span class="g">Then it's closed.</span></h2>
+      <p>If you're an expert with an established platform and you want the room that pays you to exist on repeat for what you already know, love and do, these are the ways in.</p>
+      <div class="paths">
+        <a class="path" href="https://cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open" target="_blank" rel="noopener"><i>60 minutes · 1:1</i><b>Book a Strategy Audit</b><span>We find your version of the one thing and decide whether it's a freebie that feeds your community or a premium thing people pay for. Tue, Wed, Thu only.</span><em>Book the audit →</em></a>
+        <a class="path" href="https://cal.com/amanda-fielding-smith-ljdz7y/custom-30-day-content-plan" target="_blank" rel="noopener"><i>Built live · done with you</i><b>Custom 30-Day Content Plan</b><span>Thirty days of content mapped on one call, from your own top-performing videos. Ends with one question: do you want help executing it?</span><em>Book the content plan →</em></a>
+        <a class="path" href="https://www.skool.com/amanda/about" target="_blank" rel="noopener"><i>Doors close October 7</i><b>Spiritual Business Skool</b><span>Standard $33. Premium $55. VIP $333 with the rebuilt coach as a limited-time bonus. No trial. Share this with the one friend who should be in here.</span><em>Send them the link →</em></a>
+      </div>
+      <p class="sub">Comment AUDIT in the community and I'll send you the link</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>Spiritual Business Skool · Behind the scenes</span>
+  <span><a href="https://www.skool.com/amanda" target="_blank" rel="noopener">skool.com/amanda</a> · @amandafieldingsmith</span>
+</footer>
+
+<!-- ================= SCREENSHOT MODE ================= -->
+<div class="shot" id="shot" hidden role="dialog" aria-modal="true" aria-label="Story card screenshot mode">
+  <div class="shot-top">
+    <p class="kicker" id="shotKick">Story card · screenshot at 9:16</p>
+    <div class="shot-tools">
+      <button class="btn" type="button" id="shotFull">Fullscreen <kbd>F</kbd></button>
+      <button class="btn" type="button" id="shotClose">Close <kbd>Esc</kbd></button>
+    </div>
+  </div>
+  <div class="shot-stage"><div class="scard" id="shotCard"></div></div>
+  <div class="shot-bottom">
+    <button class="btn" type="button" id="shotPrev">← Prev</button>
+    <span class="shot-count num" id="shotCount">01 / 05</span>
+    <button class="btn" type="button" id="shotNext">Next →</button>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+function $(s, r){ return (r || document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function pad(n){ return (n < 10 ? "0" : "") + n; }
+
+/* ---------------- countdown ---------------- */
+var CLOSE = new Date(2026, 9, 7, 0, 0, 0); // October 7, 2026, local
+function daysLeft(){
+  var now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  return Math.round((CLOSE - today) / 86400000);
+}
+(function(){
+  var d = daysLeft();
+  var num = $("#cdNum"), unit = $("#cdUnit"), tally = $("#cdTally");
+  if (d > 1) { num.textContent = d; unit.textContent = "days"; tally.textContent = d; }
+  else if (d === 1) { num.textContent = "1"; unit.textContent = "day. Tomorrow."; tally.textContent = "1"; }
+  else if (d === 0) { num.textContent = "0"; unit.textContent = "days. It's today."; tally.textContent = "0"; }
+  else { num.textContent = "×"; unit.textContent = "doors are closed"; tally.textContent = "0"; }
+})();
+
+/* ---------------- focus widget ---------------- */
+(function(){
+  var box = $("#focus"), n = $("#focusNum"), t = $("#focusTxt");
+  $$(".seg button", box).forEach(function(b){
+    b.addEventListener("click", function(){
+      var m = b.getAttribute("data-mode");
+      box.setAttribute("data-mode", m);
+      $$(".seg button", box).forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+      if (m === "one") {
+        n.textContent = "1";
+        t.textContent = "thing I'm known for. Everything else either feeds it or waits. Same hours, same me, one direction.";
+      } else {
+        n.textContent = "8";
+        t.textContent = "things on the list. Zero I'm known for. Every one of them is a good idea, which is exactly the problem.";
+      }
+    });
+  });
+})();
+
+/* ---------------- changelog ---------------- */
+var LOG = [
+  { area:"skool", status:"done", t:"Redid the group cover card and every piece of About page artwork.", s:"Nothing on the page says \"free trial\" or shows a price any more.",
+    why:"The artwork was selling a trial that no longer exists. If your cover card promises something the plans page doesn't deliver, Growth Boost is paying to confuse people on your behalf.",
+    yours:"Open your About page like a stranger. Every word that's out of date is costing you a member. Fix the cover card first, it's the thing cold traffic sees." },
+  { area:"skool", status:"done", t:"Added \"Doors close October 7\" to the About page and the group description.", s:"Same date, both places, this morning.",
+    why:"A deadline is the only reason to join today instead of Tuesday. Without one, \"I'll think about it\" is the default and it never comes back.",
+    yours:"Pick a date. Put it in the three places new people read first: cover card, About page, group description. Say what closes, not just when." },
+  { area:"skool", status:"done", t:"Posted here: one extra audit spot, slightly discounted, open for 24 hours.", s:"First booking of the new direction, from people who already trust me.",
+    why:"Momentum. The first sale after a decision proves the decision to your own nervous system. Do it with the warmest audience you have.",
+    yours:"Your community is the warmest room you own. Make the first offer there before you make it anywhere cold." },
+  { area:"skool", status:"done", t:"Turned off free trials. Every tier.", s:"A new Standard member joined at $33 with no trial the same day.",
+    why:"The trial converted at 52% and I still killed it. It let me lean on ads. Removing it forces me back to the foundation that made this work in the first place: content, stories, DMs. And Growth Boost means the top of the funnel keeps moving without me doubling the ad budget.",
+    yours:"If you test this, judge it on two weeks, not two days. Watch conversion, not signups. And have a foundation to fall back on before you pull it." },
+  { area:"skool", status:"live", t:"New classroom: the behind-the-scenes of this exact run.", s:"You're in it. This page, the Loom, and whatever I build next.",
+    why:"Two birds. I have to do this work anyway. Filming it is the content, and the content is a reason to be in Premium.",
+    yours:"Whatever you're doing in your business right now is a classroom. Document it as you go, not after." },
+
+  { area:"ig", status:"done", t:"Redid every Instagram highlight. Wins sorted by category.", s:"VIP wins, Strategy Audit wins, 30-Day Content Plan wins.",
+    why:"A stranger who lands on my profile from a TikTok should be able to see proof for the exact thing I'm asking them to buy, in one tap.",
+    yours:"Sort your proof by offer, not by date. If someone's considering your reading, they shouldn't have to scroll past your course testimonials to find a reading one." },
+  { area:"ig", status:"done", t:"Built one \"Work With Me\" highlight and a Canva template for it.", s:"Two or three same-category wins per page. \"Limited availability, book here\" at the bottom. Booking link on the story sticker.",
+    why:"Wins without a next step are just nice. The template makes the next step the same every time. The story card in section 05 is that template.",
+    yours:"Use the story card below. Swap the wins, keep the shape. Post it, put your link on the sticker, save it to a highlight." },
+  { area:"ig", status:"done", t:"Changed the bio CTA to \"Book your audit.\"", s:"One CTA. Not three.",
+    why:"Being known for one thing starts with the ten words under your name.",
+    yours:"What's the one thing you want to be known for right now? Your bio CTA should be that and nothing else." },
+  { area:"ig", status:"done", t:"Kept the Expat Life highlight.", s:"Huge views. I have no idea if it sells.",
+    why:"It's my life and my level of embodiment. I think it correlates with sales because it's what makes me a real person. It has to be in alignment. I'll leave it at that.",
+    yours:"Keep the part of your content that's just your life, even if it doesn't convert on paper. It's the reason people believe the rest." },
+  { area:"ig", status:"live", t:"Daily stories, starting now.", s:"New muscle for me. I know when I post stories I make money. I stopped anyway.",
+    why:"I don't do well with rigid plans, so it's three buckets instead of a calendar: wins, what's coming up, insights from calls. Section 05 has the whole system.",
+    yours:"Hold me to this one. Then pick your own version: one story a day from one of the three buckets." },
+
+  { area:"book", status:"done", t:"Opened a public cal.com link for the Strategy Audit.", s:"Anyone can book now, not just members. Stripe connected. cal.com takes the $222 at booking.",
+    why:"Audits could only be sold inside this community, so someone had to join before they could buy the highest-value thing I do. That was the bottleneck, and it was invisible to me until she pointed at it.",
+    yours:"cal.com is free and takes payments. If your best offer is only bookable through a DM or a membership, you've built a wall in front of your own door." },
+  { area:"book", status:"done", t:"Moved the Google form intake questions into the cal.com event.", s:"Same intel before the call. Different format.",
+    why:"The whole reason the audit works in 60 minutes is that I already know their numbers, their platform and their offer before we start.",
+    yours:"Whatever you ask people before a call, ask it at booking. Fewer steps, same information." },
+  { area:"book", status:"done", t:"Separate cal.com link for the Custom 30-Day Content Plan at $444, with its own intake.", s:"Different purpose, different questions.",
+    why:"People are getting real results with the plan. One member posted that a TikTok from her plan is at 20,000 likes and almost 200,000 views. A VIP client messaged that a couple of hers popped off from the hook ideas. It's a done-with-you deliverable, so it's priced above the audit. It ends with one question: do you want help executing this? Yes means VIP.",
+    yours:"If a deliverable keeps producing results, give it its own door and its own price. Then ask what comes after it." },
+  { area:"book", status:"done", t:"Calls stay Tuesday, Wednesday, Thursday only, set hours.", s:"Decided a long time ago. Not changing.",
+    why:"Projector. Energy is the constraint, not the calendar. Three call days protects the other four.",
+    yours:"Set your call days by your design, not by whenever people ask. The booking page enforces it so you don't have to." },
+  { area:"book", status:"next", t:"Bundle for the last push: audit plus content plan for $555.", s:"$666 apart. Probably the final week before the doors close.",
+    why:"A bundle at the deadline gives the people who were going to book both a reason to do it now.",
+    yours:"If you have two offers that naturally stack, the bundle is your closing-week play. Don't lead with it." },
+
+  { area:"dm", status:"broke", t:"Tried to build a ManyChat auto-DM to every new follower offering the free gift.", s:"Two to three hours in. My account is too new for that feature.",
+    why:"The plan was: new follower, automatic DM, free gift, community link. I found out at the end, not the start. So it's manual: look at the page, if they seem aligned, open the DM myself.",
+    yours:"Check the feature exists on your plan before you build the flow. And if the automation isn't available, the manual version still works. It just costs time instead of money." },
+  { area:"dm", status:"live", t:"First audit inquiry already in the DMs.", s:"Voice notes back and forth. I haven't DM-sold in a while.",
+    why:"I used to do a lot of DM selling. The qualifier is simple: are you an expert with an established platform who wants the room that pays you to exist on repeat? If yes, here's the link.",
+    yours:"One question qualifies. Ask it in a voice note so they hear you mean it." },
+  { area:"dm", status:"done", t:"Wrote a standard TikTok caption in Claude Code and saved it in the Notes app.", s:"Doors closing, audits open, \"DM me [word] to book.\"",
+    why:"No ManyChat on TikTok. So the CTA has to live in the video or the caption, every time, and it has to be the same so I never have to think about it.",
+    yours:"Write your CTA once. Save it where your thumbs are. Paste it under every video until the deadline." },
+  { area:"dm", status:"next", t:"Rebuilding the Spiritual Business Coach AI for the VIP Vault.", s:"Limited-time bonus for joining VIP before October 7.",
+    why:"It found the money model problem that added 53% to MRR. The feedback has been so good that the better version belongs behind the VIP door, as a reason to walk through it now.",
+    yours:"Your best internal tool is probably a VIP bonus. Especially the one that changed your own numbers." }
+];
+var AREAS = { skool:"Skool", ig:"Instagram", book:"Booking", dm:"Content & DMs" };
+var AREA_ORDER = ["skool","ig","book","dm"];
+var BADGE = { done:"Done", live:"In motion", broke:"Broke", next:"Next" };
+var mine = false, filter = "all";
+var checked = LOG.map(function(){ return false; });
+
+function renderLog(){
+  var list = $("#logList"), html = "";
+  AREA_ORDER.forEach(function(a){
+    var idxs = [];
+    LOG.forEach(function(it, i){ if (it.area === a) idxs.push(i); });
+    var hiddenArea = filter !== "all" && filter !== a;
+    html += '<div class="area"' + (hiddenArea ? ' hidden' : '') + '><h3>' + esc(AREAS[a]) + ' <i>' + idxs.length + '</i></h3><div class="items">';
+    idxs.forEach(function(i){
+      var it = LOG[i];
+      var isChecked = mine ? checked[i] : (it.status === "done" || it.status === "live");
+      html += '<div class="it" data-i="' + i + '" data-checked="' + isChecked + '" data-open="false">' +
+        '<button class="it-row" type="button" aria-expanded="false">' +
+          '<span class="box" aria-hidden="true"></span>' +
+          '<span><b>' + esc(it.t) + '</b><small>' + esc(it.s) + '</small></span>' +
+          '<span class="badge ' + it.status + '">' + BADGE[it.status] + '</span>' +
+        '</button>' +
+        '<div class="it-more"><div class="why"><h4>Why I did it</h4>' + esc(it.why) + '</div><div class="yours"><h4>Your version</h4>' + esc(it.yours) + '</div></div>' +
+      '</div>';
+    });
+    html += '</div></div>';
+  });
+  list.innerHTML = html;
+  list.className = mine ? "mine-on" : "";
+  updateProg();
+}
+function updateProg(){
+  var total = LOG.length, n, lbl;
+  if (mine) {
+    n = checked.filter(Boolean).length;
+    lbl = "Your run · " + n + " of " + total + " done";
+  } else {
+    n = LOG.filter(function(it){ return it.status === "done" || it.status === "live"; }).length;
+    lbl = "Amanda's run · " + n + " of " + total + " landed";
+  }
+  var pct = Math.round(n / total * 100);
+  $("#progLbl").textContent = lbl;
+  $("#progPct").textContent = pct + "%";
+  $("#progBar").style.width = pct + "%";
+}
+$("#logList").addEventListener("click", function(ev){
+  var row = ev.target.closest(".it-row");
+  if (!row) return;
+  var it = row.parentNode, i = parseInt(it.getAttribute("data-i"), 10);
+  if (mine) {
+    checked[i] = !checked[i];
+    it.setAttribute("data-checked", String(checked[i]));
+    updateProg();
+  } else {
+    var open = it.getAttribute("data-open") !== "true";
+    it.setAttribute("data-open", String(open));
+    row.setAttribute("aria-expanded", String(open));
+  }
+});
+$$(".filters button").forEach(function(b){
+  b.addEventListener("click", function(){
+    filter = b.getAttribute("data-area");
+    $$(".filters button").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+    renderLog();
+  });
+});
+$("#mineSw").addEventListener("click", function(){
+  mine = !mine;
+  this.setAttribute("aria-checked", String(mine));
+  $("#mineLbl").textContent = mine ? "Your checklist (tap to tick)" : "Make it mine";
+  renderLog();
+});
+renderLog();
+
+/* ---------------- ladder ---------------- */
+var RUNGS = [
+  { n:"Standard", p:"$33", per:"/mo", t:"The room", s:"No trial. Doors close Oct 7.",
+    job:"Get in the room and see how it's done. Every gem, every classroom, the feed, the calls you can watch back.",
+    how:"Free trials are off. $33 from day one. Growth Boost keeps sending cold traffic to the cover card, and the cover card no longer promises a trial." },
+  { n:"Premium", p:"$55", per:"/mo", t:"Ask me on the call", s:"Submit questions I answer live.",
+    job:"The floor above Standard. You bring the question, I answer it on the call, and you get the tools that don't go out to Standard.",
+    how:"The behind-the-scenes classroom of this run lives here. So does every artifact I build while doing it." },
+  { n:"VIP", p:"$333", per:"/mo", t:"The rung that fixed the gap", s:"3x monthly group coaching, custom ads strategy.", isNew:true,
+    job:"For established creators with a platform of 5k+ and proven client results. Three live group calls a month, a custom ads strategy, AI systems for your brand.",
+    how:"Launched in August after the coach AI found the 30x gap. Now: the rebuilt Spiritual Business Coach AI joins the VIP Vault as a limited-time bonus before October 7." },
+  { n:"Strategy Audit", p:"$222", per:"once", t:"The one thing", s:"60 min, 1:1. Now open to anyone.", isNew:true,
+    job:"Find your version of the thing that works while you sleep, and decide whether it's a freebie that feeds your community or a premium thing people pay for. Clarity, not delivery.",
+    how:"Public cal.com link, Stripe connected, intake questions at booking. Tuesday, Wednesday, Thursday only. About a third of audits turn into 1:1 work, and nobody is pushed. Book at cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open" },
+  { n:"30-Day Plan", p:"$444", per:"once", t:"The doorway to VIP", s:"Built live on one call.", isNew:true,
+    job:"Thirty days of content mapped from your own top-performing videos, live, in 60 minutes. A done-with-you deliverable, so it's priced above the audit. One member's video from her plan is at 20,000 likes and almost 200,000 views and counting.",
+    how:"Its own cal.com link and its own intake. Ends with one question: do you want help executing this, or do it on your own? Help means VIP. Book at cal.com/amanda-fielding-smith-ljdz7y/custom-30-day-content-plan" },
+  { n:"Bundle", p:"$555", per:"once", t:"The last push", s:"Audit plus plan. $666 apart.",
+    job:"For the person who was going to book both. A reason to do it before the deadline instead of after.",
+    how:"Not live yet. Probably the final week before October 7. You'll see it on stories first." },
+  { n:"1:1", p:"$997", per:"/mo × 90 days", t:"Work with me", s:"By application, after an audit.",
+    job:"Ninety days of building the room together. The audit decides whether this is the right next step, not the other way round.",
+    how:"Nothing changed here. It's where the audit and the content plan lead when someone says \"I want help executing this.\"" }
+];
+var rungSel = 3;
+function renderLadder(){
+  $("#ladderGrid").innerHTML = RUNGS.map(function(r, i){
+    return '<button class="rung" type="button" data-i="' + i + '" aria-pressed="' + (i === rungSel) + '">' +
+      (r.isNew ? '<span class="new">New door</span>' : '') +
+      '<div class="rn">' + esc(r.n) + '</div>' +
+      '<div class="rp">' + esc(r.p) + '</div>' +
+      '<span class="rs">' + esc(r.per) + '</span>' +
+      '<span class="rt">' + esc(r.t) + '</span>' +
+      '<span class="rs">' + esc(r.s) + '</span>' +
+    '</button>';
+  }).join("");
+  var r = RUNGS[rungSel];
+  $("#rdJob").textContent = r.job;
+  $("#rdHow").innerHTML = esc(r.how).replace(/(cal\.com\/[\w\-\/]+)/g, '<a href="https://$1" target="_blank" rel="noopener">$1</a>');
+}
+$("#ladderGrid").addEventListener("click", function(ev){
+  var b = ev.target.closest(".rung"); if (!b) return;
+  rungSel = parseInt(b.getAttribute("data-i"), 10);
+  renderLadder();
+});
+renderLadder();
+
+/* ---------------- gap toggle ---------------- */
+$$("#gap .seg button").forEach(function(b){
+  b.addEventListener("click", function(){
+    var m = b.getAttribute("data-gap");
+    $$("#gap .seg button").forEach(function(x){ x.setAttribute("aria-pressed", String(x === b)); });
+    $("#gapBefore").style.display = m === "before" ? "" : "none";
+    $("#gapAfter").style.display = m === "after" ? "" : "none";
+    $("#gapRead").innerHTML = m === "before"
+      ? "<b>Before:</b> a member who loved Premium had nowhere to go except a 30x jump. Most people don't jump 30x. They just stay, or they leave."
+      : "<b>Today:</b> $55 to $333 is 6x. $333 to $997 is 3x. Upgrades now out-earn new members 3.6 to 1, and revenue retention is 109%.";
+  });
+});
+
+/* ---------------- story card ---------------- */
+var CARD_DEFAULT = {
+  cat:"audit", head:"What happens on a Strategy Audit",
+  w1:'"My 1:1 with Amanda was INCREDIBLE!! Huge eye-opening breakthrough."', n1:"Luana · Spirits",
+  w2:'"I had a call with Amanda last night with a half-built community that is growing really quickly but not a lot of upgrades were happening."', n2:"Tara",
+  w3:'"I was feeling a little lost and confused. It was so helpful!"', n3:"Lexie",
+  cta:"Limited availability. Book here.", handle:"@amandafielding.smith"
+};
+var CAT_LABEL = { audit:"Strategy Audit · wins", vip:"VIP · wins", plan:"30-Day Content Plan · wins", own:"Client wins" };
+var CAT_HEAD = { audit:"What happens on a Strategy Audit", vip:"What VIP looks like from the inside", plan:"30 days of content, one call", own:"" };
+var CAT_PRESET = {
+  audit: CARD_DEFAULT,
+  vip: {
+    cat:"vip", head:"What VIP looks like from the inside",
+    w1:'"This Girl Knows What She\'s Doing! It was the VIP 1:1 call and GURL! it was so helpful!"', n1:"Lexie",
+    w2:'"I just finished my first one-on-one session with Amanda and WOW. What a breakthrough."', n2:"Natalia",
+    w3:'"Amanda is a WIZARD!"', n3:"Tara",
+    cta:"Limited availability. Book here.", handle:"@amandafielding.smith"
+  },
+  plan: {
+    cat:"plan", head:"30 days of content, one call",
+    w1:'"This most recent TikTok that I made from using Amanda\'s 30 day content plan far surpassed anything I could\'ve imagined. Currently at 20,000 likes and almost 200,000 views and counting."', n1:"Posted in the community",
+    w2:'"That 30 day content planner actually works! I\'ve had a couple really pop off based off of some of the hook ideas."', n2:"VIP client, WhatsApp",
+    w3:'"It\'s still going. 50k views so far." Then: "We\'re up to 8,000 likes now."', n3:"Same client, next morning",
+    cta:"Limited availability. Book here.", handle:"@amandafielding.smith"
+  }
+};
+function readForm(){
+  return {
+    cat: $("#fCat").value, head: $("#fHead").value,
+    w1: $("#fW1").value, n1: $("#fN1").value,
+    w2: $("#fW2").value, n2: $("#fN2").value,
+    w3: $("#fW3").value, n3: $("#fN3").value,
+    cta: $("#fCta").value, handle: $("#fHandle").value
+  };
+}
+function writeForm(d){
+  $("#fCat").value = d.cat; $("#fHead").value = d.head;
+  $("#fW1").value = d.w1; $("#fN1").value = d.n1;
+  $("#fW2").value = d.w2; $("#fN2").value = d.n2;
+  $("#fW3").value = d.w3; $("#fN3").value = d.n3;
+  $("#fCta").value = d.cta; $("#fHandle").value = d.handle;
+}
+function headHTML(h){
+  // last two words become the italic gradient accent
+  var words = (h || "").trim().split(/\s+/);
+  if (words.length < 3) return esc(h);
+  var tail = words.splice(-2).join(" ");
+  return esc(words.join(" ")) + " <em>" + esc(tail) + "</em>";
+}
+function cardHTML(d){
+  var wins = [[d.w1, d.n1],[d.w2, d.n2],[d.w3, d.n3]].filter(function(w){ return (w[0] || "").trim(); });
+  return '<p class="sk">' + esc(CAT_LABEL[d.cat] || "Client wins") + '</p>' +
+    '<h3>' + headHTML(d.head) + '</h3>' +
+    '<div class="wins">' + wins.map(function(w){
+      return '<div class="w"><p>' + esc(w[0]) + '</p>' + (w[1] ? '<small>' + esc(w[1]) + '</small>' : '') + '</div>';
+    }).join("") + '</div>' +
+    '<div class="cta"><div><b>' + esc(d.cta) + '</b><br><span class="arrow">Link on the sticker ↑</span></div><span>' + esc(d.handle) + '</span></div>';
+}
+function renderPreview(){ $("#cardPreview").innerHTML = cardHTML(readForm()); }
+$("#cardForm").addEventListener("input", function(ev){
+  if (ev.target.id === "fCat") return;
+  renderPreview();
+});
+$("#fCat").addEventListener("change", function(){
+  if (CAT_PRESET[this.value]) writeForm(CAT_PRESET[this.value]);
+  else if (this.value === "own") $("#fHead").value = "";
+  renderPreview();
+});
+$("#fReset").addEventListener("click", function(){ writeForm(CARD_DEFAULT); renderPreview(); });
+renderPreview();
+
+/* ---------------- worksheet ---------------- */
+function commit(){
+  var a = $("#q1").value.trim(), b = $("#q2").value.trim(), c = $("#q3").value.trim();
+  var out = $("#commitTxt");
+  if (!a && !b && !c) { out.textContent = "Fill in the three questions and your commitment writes itself here."; return ""; }
+  var line = "I'm going all in on " + (a || "[the thing that already pays]") +
+    ". To do that I'm stopping " + (b || "[the thing I keep doing instead]") +
+    ". Deadline: " + (c || "[date and what closes]") + ".";
+  out.innerHTML = "I'm going all in on <b>" + esc(a || "[the thing that already pays]") + "</b>. To do that I'm stopping <b>" + esc(b || "[the thing I keep doing instead]") + "</b>. Deadline: <b>" + esc(c || "[date and what closes]") + "</b>.";
+  return line;
+}
+["q1","q2","q3"].forEach(function(id){ $("#" + id).addEventListener("input", commit); });
+$("#copyCommit").addEventListener("click", function(){
+  var line = commit() || $("#commitTxt").textContent;
+  var ok = $("#copyOk");
+  function done(){ ok.hidden = false; setTimeout(function(){ ok.hidden = true; }, 1800); }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(line).then(done, function(){ fallback(line); done(); });
+  } else { fallback(line); done(); }
+  function fallback(text){
+    var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+});
+
+/* ---------------- streak ---------------- */
+(function(){
+  var start = new Date(2026, 8, 24), wrap = $("#days"), html = "";
+  var now = new Date(), today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var posted = [];
+  for (var i = 0; i < 14; i++) {
+    var d = new Date(start.getFullYear(), start.getMonth(), start.getDate() + i);
+    var cls = "day" + (d < today ? " past" : "") + (d.getTime() === today.getTime() ? " today" : "");
+    html += '<button class="' + cls + '" type="button" data-i="' + i + '" aria-pressed="false" aria-label="' + (d.getMonth() === 8 ? "Sep " : "Oct ") + d.getDate() + '">' + d.getDate() + '</button>';
+    posted.push(false);
+  }
+  wrap.innerHTML = html;
+  wrap.addEventListener("click", function(ev){
+    var b = ev.target.closest(".day"); if (!b) return;
+    var i = parseInt(b.getAttribute("data-i"), 10);
+    posted[i] = !posted[i];
+    b.setAttribute("aria-pressed", String(posted[i]));
+    var n = posted.filter(Boolean).length;
+    $("#streakN").textContent = n;
+    $("#streakTxt").textContent = n === 14 ? "of 14. Every single day. Doors closed with the streak intact." : "of 14 days posted";
+  });
+})();
+
+/* ---------------- sticky nav highlight ---------------- */
+(function(){
+  var links = $$(".snav a"), secs = links.map(function(a){ return $(a.getAttribute("href")); });
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      links.forEach(function(a){ a.classList.toggle("cur", a.getAttribute("href") === "#" + e.target.id); });
+    });
+  }, { rootMargin:"-40% 0px -55% 0px" });
+  secs.forEach(function(s){ if (s) io.observe(s); });
+})();
+
+/* ---------------- screenshot mode ---------------- */
+var SHOTS = [
+  { kick:"Story card 01 · the run", html:function(){
+      var d = daysLeft();
+      return '<p class="sk">Behind the scenes</p><h3>I turned off <em>free trials.</em></h3>' +
+        '<div class="wins"><div class="w"><p>Doors to Spiritual Business Skool close October 7.</p><small>' + (d > 0 ? d + " days left" : "closed") + '</small></div>' +
+        '<div class="w"><p>One mentor call. Nineteen changes in 24 hours. One broke.</p><small>Full list inside the community</small></div>' +
+        '<div class="w"><p>All in on the one thing the numbers point at.</p><small>The Strategy Audit</small></div></div>' +
+        '<div class="cta"><div><b>Doors close Oct 7.</b><br><span class="arrow">Link on the sticker ↑</span></div><span>@amandafielding.smith</span></div>';
+  } },
+  { kick:"Story card 02 · audit wins", html:function(){ return cardHTML(CARD_DEFAULT); } },
+  { kick:"Story card 03 · content plan wins", html:function(){ return cardHTML(CAT_PRESET.plan); } },
+  { kick:"Story card 04 · the receipt", html:function(){
+      return '<p class="sk">The receipt</p><h3>The AI said <em>money model.</em></h3>' +
+        '<div class="wins"><div class="w"><p>I thought my constraint was volume. It read my numbers and said no.</p><small>Aug 17</small></div>' +
+        '<div class="w"><p>30x jump from Premium to 1:1, nothing in between. So I launched VIP.</p><small>The fix</small></div>' +
+        '<div class="w"><p>MRR up 53% in 30 days, on half the ad spend.</p><small>The mechanism, not the flex</small></div></div>' +
+        '<div class="cta"><div><b>Want yours read?</b><br><span class="arrow">Book the audit ↑</span></div><span>@amandafielding.smith</span></div>';
+  } },
+  { kick:"Story card 05 · one thing", html:function(){
+      return '<p class="sk">From the call</p><h3>If you\'re prioritizing everything, you\'re <em>prioritizing nothing.</em></h3>' +
+        '<div class="wins"><div class="w"><p>"The quality of your questions directs the quality of your focus."</p><small>My mentor, yesterday</small></div>' +
+        '<div class="w"><p>What do your numbers say already pays? Go there. Stop the rest.</p><small>Your version</small></div></div>' +
+        '<div class="cta"><div><b>Comment AUDIT and I\'ll send the link.</b></div><span>@amandafielding.smith</span></div>';
+  } }
+];
+var shot = $("#shot"), shotCard = $("#shotCard"), shotKick = $("#shotKick"), shotCount = $("#shotCount");
+var sIdx = 0, customMode = false;
+function showShot(i){
+  if (customMode) {
+    shotCard.innerHTML = cardHTML(readForm());
+    shotKick.textContent = "Your story card · screenshot at 9:16";
+    shotCount.textContent = "yours";
+    return;
+  }
+  sIdx = (i + SHOTS.length) % SHOTS.length;
+  shotCard.innerHTML = SHOTS[sIdx].html();
+  shotKick.textContent = SHOTS[sIdx].kick + " · screenshot at 9:16";
+  shotCount.textContent = pad(sIdx + 1) + " / " + pad(SHOTS.length);
+}
+function openShot(from){
+  customMode = from === "custom";
+  shot.hidden = false;
+  document.documentElement.style.overflow = "hidden";
+  showShot(customMode ? 0 : (parseInt(from, 10) || 0));
+  $("#shotNext").focus();
+}
+function closeShot(){
+  shot.hidden = true;
+  document.documentElement.style.overflow = "";
+  if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen();
+}
+$$("[data-shot]").forEach(function(b){ b.addEventListener("click", function(){ openShot(b.getAttribute("data-shot")); }); });
+$("#shotClose").addEventListener("click", closeShot);
+$("#shotPrev").addEventListener("click", function(){ if (customMode) { customMode = false; showShot(SHOTS.length - 1); } else showShot(sIdx - 1); });
+$("#shotNext").addEventListener("click", function(){ if (customMode) { customMode = false; showShot(0); } else showShot(sIdx + 1); });
+$("#shotFull").addEventListener("click", function(){
+  if (document.fullscreenElement) { if (document.exitFullscreen) document.exitFullscreen(); }
+  else if (shot.requestFullscreen) shot.requestFullscreen();
+});
+document.addEventListener("keydown", function(ev){
+  var tag = (ev.target && ev.target.tagName) || "";
+  if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+  if (shot.hidden) {
+    if (ev.key === "s" || ev.key === "S") { ev.preventDefault(); openShot("0"); }
+    return;
+  }
+  if (ev.key === "Escape") { ev.preventDefault(); closeShot(); }
+  else if (ev.key === "ArrowRight") { ev.preventDefault(); $("#shotNext").click(); }
+  else if (ev.key === "ArrowLeft") { ev.preventDefault(); $("#shotPrev").click(); }
+  else if (ev.key === "f" || ev.key === "F") { ev.preventDefault(); $("#shotFull").click(); }
+});
+
+})();
+</script>
+</body>
+</html>
