@@ -38,16 +38,19 @@ I just hadn't made the audit the main thing."*
 
 ## Beat 2 — The 24 hours (2:00–5:00) · section 02
 
-Scroll the changelog. Don't read all 19. Open four:
+Scroll the changelog. Don't read all 21. Open five:
 
 1. **Trials off** — open the "why". Say the 52% out loud and that you killed it anyway.
-   Mention the first $33 Standard member that came in with no trial the same day.
-2. **Open cal.com link for the audit** — "audits could only be sold inside this community.
+   Then the receipts: one Standard and one Premium joined today at full price, no trial.
+2. **Audit client joined VIP** and **VIP renewed for a year** — the two lines right under it.
+   "The audit isn't the sale. It's where someone decides what their next room is." Don't
+   linger. Two sentences, then move on.
+3. **Open cal.com link for the audit** — "audits could only be sold inside this community.
    Someone had to join before they could buy the most valuable thing I do. That was the
    bottleneck and I couldn't see it."
-3. **ManyChat broke** — two to three hours, account too new. Keep it in. This is the
+4. **ManyChat broke** — two to three hours, account too new. Keep it in. This is the
    cowboy-testing beat and it's the one they'll trust you for.
-4. **Daily stories** — "I know when I post stories I make money. I stopped anyway."
+5. **Daily stories** — "I know when I post stories I make money. I stopped anyway."
 
 Then flip **Make it mine**. Show the list going blank and the progress bar resetting.
 
@@ -69,7 +72,9 @@ this?" Yes means VIP. Don't sell the bundle here. Mention it's coming.
 
 ## Beat 4 — The receipt (6:00–7:30) · section 04
 
-Walk the five steps. Flip the gap diagram **August 16 → Today**.
+Walk the six steps, ending on today's reading: $7,804 MRR, 544 members, 109% retention,
+Instagram the number one signup source on an account rebuilt from zero. Then flip the gap
+diagram **August 16 → Today**. Premium is $97 now, so the gaps read 3.4x and 3x.
 
 > "I was sure my constraint was volume. It read my numbers and said no. Thirty-x jump from
 > Premium to one-to-one with nothing in between. So I launched VIP. Thirty days later MRR
@@ -128,6 +133,7 @@ Say this close to verbatim, with the three doors on screen:
 - **Never** "book an audit and I'll build you a tool" or "I'll write your plan." The audit is
   clarity. The content plan is the done-with-you deliverable and it has its own door.
 - Prices are fine in here. This is inside Skool. The $222 stays off public pages.
+- Premium is **$97** everywhere in the artifact. If you see $55 anywhere on screen, stop and tell me.
 - The ManyChat failure stays in the video. Cutting it makes the whole thing less believable.
 - Don't apologise for removing the trial. Say it once, show the receipt, move on.
 
