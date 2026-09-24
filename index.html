@@ -352,7 +352,7 @@ footer a{color:var(--lav);text-decoration:none}
   <div class="tally" aria-label="The run at a glance">
     <div><b class="num">24</b><span>hours</span><small>From the mentor call to this page</small></div>
     <div><b class="num">5</b><span>receipts</span><small>1 audit client went VIP, 1 VIP renewed for a year, 3 joined with no trial</small></div>
-    <div><b class="num">21</b><span>changes</span><small>18 done or in motion, 2 queued, 1 broke. I&#39;m telling you which</small></div>
+    <div><b class="num">22</b><span>changes</span><small>19 done or in motion, 2 queued, 1 broke. I&#39;m telling you which</small></div>
     <div><b class="num" id="cdTally">13</b><span>days left</span><small>Until the doors close on October 7</small></div>
   </div>
 </section>
@@ -440,7 +440,7 @@ footer a{color:var(--lav);text-decoration:none}
       <button type="button" data-area="skool" aria-pressed="false">Skool</button>
       <button type="button" data-area="ig" aria-pressed="false">Instagram</button>
       <button type="button" data-area="book" aria-pressed="false">Booking</button>
-      <button type="button" data-area="dm" aria-pressed="false">Content &amp; DMs</button>
+      <button type="button" data-area="dm" aria-pressed="false">Content, DMs &amp; Ads</button>
     </div>
     <div class="mine">
       <span id="mineLbl">Make it mine</span>
@@ -489,7 +489,7 @@ footer a{color:var(--lav);text-decoration:none}
         <div class="step"><i>WHAT IT SAID</i><div><b>"You have plenty of volume. Even at 3x spend you don't hit $10K."</b><span>The jump from Premium to 1:1 was 30x with nothing in between. Money model, not traffic.</span></div></div>
         <div class="step"><i>WHAT I DID</i><div><b>Launched VIP at $333</b><span>A real rung between Premium and the $997 1:1. Raised the floor to $33 while I was at it.</span></div></div>
         <div class="step"><i>30 DAYS LATER</i><div><b>MRR up 53% on half the ad spend</b><span>Average revenue per member went from $7.78 to $13.10. Upgrades now out-earn new members 3.6 to 1.</span></div></div>
-        <div class="step"><i>TODAY</i><div><b>$7,804 MRR · 544 members · 109% retention</b><span>$851 new MRR in the last 30 days. Instagram is the number one signup source at 33%, on an account rebuilt from zero after the hack. Another audit client went VIP and a VIP renewed for the year.</span></div></div>
+        <div class="step"><i>TODAY</i><div><b>$7,804 MRR · 544 members · 109% retention</b><span>$851 new MRR in the last 30 days. Instagram is the number one signup source at 33%, on an account rebuilt from zero after the hack. Another audit client went VIP and a VIP renewed for the year. Sales campaigns paused; only traffic, engagement and Growth Boost running.</span></div></div>
       </div>
       <p class="pull">Numbers prove a mechanism. They are never the flex. The mechanism here is: ask a better question and the answer stops being "spend more."</p>
       <p class="note">Coming to the VIP Vault: a rebuilt version of the coach, trained on everything I've learned since. Limited-time bonus for joining VIP before the doors close.</p>
@@ -730,7 +730,7 @@ var LOG = [
   { area:"skool", status:"done", t:"Added \"Doors close October 7\" to the About page and the group description.", s:"Same date, both places, this morning.",
     why:"A deadline is the only reason to join today instead of Tuesday. Without one, \"I'll think about it\" is the default and it never comes back.",
     yours:"Pick a date. Put it in the three places new people read first: cover card, About page, group description. Say what closes, not just when." },
-  { area:"skool", status:"done", t:"Posted here: one extra audit spot, slightly discounted, open for 24 hours.", s:"First booking of the new direction, from people who already trust me.",
+  { area:"skool", status:"done", t:"Posted here: one extra audit spot at $147 instead of $222, open for 28 hours.", s:"Booked. It's back at $222 now.",
     why:"Momentum. The first sale after a decision proves the decision to your own nervous system. Do it with the warmest audience you have.",
     yours:"Your community is the warmest room you own. Make the first offer there before you make it anywhere cold." },
   { area:"skool", status:"done", t:"Turned off free trials. Every tier.", s:"One Standard joined the same day. Today: one Standard and one Premium, both at full price, no trial.",
@@ -787,11 +787,14 @@ var LOG = [
   { area:"dm", status:"done", t:"Wrote a standard TikTok caption in Claude Code and saved it in the Notes app.", s:"Doors closing, audits open, \"DM me [word] to book.\"",
     why:"No ManyChat on TikTok. So the CTA has to live in the video or the caption, every time, and it has to be the same so I never have to think about it.",
     yours:"Write your CTA once. Save it where your thumbs are. Paste it under every video until the deadline." },
+  { area:"dm", status:"done", t:"Paused every Meta sales campaign.", s:"Only traffic and engagement ads from here, plus Skool Growth Boost.",
+    why:"Instagram is my number one traffic source even after the hack and the rebuild from zero. The job of ads right now is to feed that, not to close. Growth Boost handles cold traffic to the cover card for free, and the close happens in stories, DMs and the audit.",
+    yours:"If you're closing doors, ask what each campaign is for. A sales campaign with no trial and a deadline is paying for a job your content is already doing." },
   { area:"dm", status:"next", t:"Rebuilding the Spiritual Business Coach AI for the VIP Vault.", s:"Limited-time bonus for joining VIP before October 7.",
     why:"It found the money model problem that added 53% to MRR. The feedback has been so good that the better version belongs behind the VIP door, as a reason to walk through it now.",
     yours:"Your best internal tool is probably a VIP bonus. Especially the one that changed your own numbers." }
 ];
-var AREAS = { skool:"Skool", ig:"Instagram", book:"Booking", dm:"Content & DMs" };
+var AREAS = { skool:"Skool", ig:"Instagram", book:"Booking", dm:"Content, DMs & Ads" };
 var AREA_ORDER = ["skool","ig","book","dm"];
 var BADGE = { done:"Done", live:"In motion", broke:"Broke", next:"Next" };
 var mine = false, filter = "all";

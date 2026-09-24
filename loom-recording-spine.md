@@ -38,7 +38,7 @@ I just hadn't made the audit the main thing."*
 
 ## Beat 2 — The 24 hours (2:00–5:00) · section 02
 
-Scroll the changelog. Don't read all 21. Open five:
+Scroll the changelog. Don't read all 22. Open five:
 
 1. **Trials off** — open the "why". Say the 52% out loud and that you killed it anyway.
    Then the receipts: one Standard and one Premium joined today at full price, no trial.
