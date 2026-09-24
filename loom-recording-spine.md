@@ -1,9 +1,9 @@
-# Closing the Doors — Behind the Scenes Loom Recording Spine
+# Closing Doors + Audit Launch — Loom Recording Spine
 
 **Job of this video:** book strategy audits, and get members sharing the doors-close date.
 **Runtime target:** 8 to 10 min. Screen share the artifact the whole way.
 **Where it goes:** Skool community feed, all tiers. Then into the new behind-the-scenes classroom.
-**The artifact:** `04 Artifacts/Closing the Doors - 24 Hours Behind the Scenes.html`
+**The artifact:** `04 Artifacts/Closing Doors + Audit Launch.html`
 **Source:** your voice memo, 2026-09-24 (`08 Content Library/Transcripts/_Inbox/Closing Doors Launch BTS - 24 Hours After Mentor Call.md`)
 
 ---
