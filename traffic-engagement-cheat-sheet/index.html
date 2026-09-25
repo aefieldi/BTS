@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Day 2: Traffic + Engagement Campaigns</title>
-<meta name="description" content="How Amanda regrew a hacked Instagram with two $7-a-day Meta campaigns and two ManyChat automations. Every click, as a checklist, with the Tier 1 country list ready to paste.">
+<title>Traffic + Engagement Campaign Cheat Sheet</title>
+<meta name="description" content="Every click to set up a Meta traffic campaign and an engagement campaign on Instagram, wire them to ManyChat, and grow your following and personal brand for $5 to $7 a day. With the Tier 1 country list ready to paste.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,500;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -237,6 +237,14 @@ h2 .g{display:inline}
 .fl.paid i{color:var(--gold)}
 .fl.end{border-color:rgba(126,236,212,.45);background:linear-gradient(150deg,rgba(63,191,149,.18),rgba(26,26,48,.5) 70%)}
 .fl.end i{color:var(--mint)}
+.receipt-card{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center;margin-top:26px;border:1px solid var(--line2);border-radius:22px;padding:24px 26px;background:linear-gradient(160deg,rgba(139,95,199,.22),rgba(26,26,48,.6) 60%)}
+.receipt-card i{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.receipt-card b{display:block;font-weight:700;font-size:clamp(19px,2.2vw,24px);line-height:1.2;margin-bottom:10px}
+.receipt-card p{color:var(--txt2);font-size:14.5px}
+.rc-nums{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rc-nums div{padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(13,13,26,.45)}
+.rc-nums b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:30px;line-height:1;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;margin:0}
+.rc-nums span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);margin-top:6px}
 .buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:26px}
 .bk{border-radius:18px;padding:20px 22px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
 .bk h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:10px;color:var(--mint)}
@@ -282,7 +290,7 @@ footer a{color:var(--lav);text-decoration:none}
 
 /* ---------- responsive ---------- */
 @media (max-width:860px){
-  .hero,.two,.ws{grid-template-columns:minmax(0,1fr)}
+  .hero,.two,.ws,.receipt-card{grid-template-columns:minmax(0,1fr)}
   .hero{padding-block:36px 26px;gap:26px}
   .door-wrap{max-width:100%}
   .sec{padding-block:44px}
@@ -309,11 +317,11 @@ footer a{color:var(--lav);text-decoration:none}
 <!-- ================= HERO ================= -->
 <header class="wrap hero">
   <div>
-    <p class="kicker">Behind the scenes · Day 2 · September 25, 2026</p>
-    <h1>$14 a day. <span class="g">Zero sales campaigns.</span></h1>
-    <p class="tag">How I'm regrowing a hacked Instagram and delivering every freebie on autopilot.</p>
-    <p class="lead">My Instagram got hacked a month ago. I rebuilt it from zero to 700 followers and it is still my number one signup source. The reason is two boring little Meta campaigns and two ManyChat automations. This is every click, in order, with checkboxes, so you can build yours while I add to mine.</p>
-    <p class="byline"><b>Doors close October 7 and I've paused every sales campaign.</b> Growth Boost brings people into Skool. Traffic and engagement grow the audience and deliver the gems. That's the whole paid plan right now, and it costs less than lunch.</p>
+    <p class="kicker">Cheat sheet · Meta Ads + ManyChat</p>
+    <h1>The Ultimate Traffic + Engagement <span class="g">Campaign Cheat Sheet</span></h1>
+    <p class="tag">Grow your following and your personal brand for the price of a coffee a day.</p>
+    <p class="lead">A traffic campaign sends people to your profile. An engagement campaign buys comments on your reel. ManyChat hands over the gem and asks for the follow. Two campaigns, two automations, $5 to $7 a day each. This is every click, in order, with checkboxes.</p>
+    <p class="byline"><b>This is the exact setup I run on my own Instagram.</b> Checkboxes save in your browser, so build it in one sitting or come back to it. Tap any line with a badge for the why.</p>
     <div class="actions">
       <a class="btn primary" href="#prep">Start the checklist</a>
       <a class="btn" href="#countries">Get the Tier 1 country list</a>
@@ -336,11 +344,11 @@ footer a{color:var(--lav);text-decoration:none}
 
 <section class="wrap">
   <div class="tally" aria-label="The setup at a glance">
-    <div><b class="num">$7</b><span>a day · traffic</span><small>Instagram profile visits. Buys the follow.</small></div>
-    <div><b class="num">$7</b><span>a day · engagement</span><small>Comments on the reel. Fires ManyChat.</small></div>
+    <div><b class="num">2</b><span>campaigns</span><small>Traffic buys the follow. Engagement buys the comment.</small></div>
+    <div><b class="num">$7</b><span>a day · each</span><small>Or $5. Always on, never a launch.</small></div>
     <div><b class="num">27</b><span>tier 1 countries</span><small>Pasted in bulk into both campaigns. List below.</small></div>
-    <div><b class="num">700</b><span>followers back</span><small>From zero in 30 days, on a hacked account.</small></div>
-    <div><b class="num" id="cdTally">12</b><span>days left</span><small>Until the doors close on October 7.</small></div>
+    <div><b class="num">2</b><span>automations</span><small>One per keyword, plus a free-gift catch-all.</small></div>
+    <div><b class="num">58</b><span>steps</span><small>Every one a click. None of them hard.</small></div>
   </div>
 </section>
 
@@ -496,7 +504,7 @@ footer a{color:var(--lav);text-decoration:none}
     <div>
       <p class="kicker">Two automations, built once</p>
       <h2>The ad buys the comment. <span class="g">ManyChat hands over the gem.</span></h2>
-      <p class="runs">One automation per keyword, plus one catch-all for the free gift. I duplicated my CONFESS automation into an ADS one, then built FREE GIFT so any future reel can use it. Both now send to the free gift page and the audit link instead of into Skool, because doors close October 7 and I want these to run for a year without me touching them.</p>
+      <p class="runs">One automation per keyword, plus one catch-all for the free gift. I duplicated my CONFESS automation into an ADS one, then built FREE GIFT so any future reel can use it. Both send to the free gift page and the audit link instead of into my community, because prices and doors change and I want these to run for a year without me touching them.</p>
     </div>
   </div>
   <div class="two">
@@ -539,7 +547,7 @@ footer a{color:var(--lav);text-decoration:none}
     <div>
       <p class="kicker">More friction, not less</p>
       <h2>I stopped inviting people into Skool <span class="g">from the DM.</span></h2>
-      <p class="runs">That sounds backwards for someone closing her doors in twelve days. It isn't. I feel called to work with established entrepreneurs who already create content and already have momentum. So I'm qualifying them as early as I can: bio, then DM, then the free gift, then the audit. Every stage says the same thing: if you have this, this and this, book a call.</p>
+      <p class="runs">That sounds backwards for someone who runs a paid community. It isn't. I feel called to work with established entrepreneurs who already create content and already have momentum. So I'm qualifying them as early as I can: bio, then DM, then the free gift, then the audit. Every stage says the same thing: if you have this, this and this, book a call.</p>
     </div>
   </div>
   <div class="flow" aria-label="The path from reel to audit">
@@ -551,12 +559,16 @@ footer a{color:var(--lav);text-decoration:none}
     <div class="fl end"><i>The door</i><b>Strategy Audit</b><span>Linked at the top and bottom of the gift. Open to anyone, in or out of Skool.</span></div>
   </div>
   <div class="buckets">
-    <div class="bk"><h3>01 · Evergreen</h3><p>Doors close October 7. I don't know when they reopen, at what price, or with what inside. An automation that says "join Skool" breaks the day they close. One that hands over a free gift and an audit link runs for a year.</p><ul><li>Nothing in the DM has a date in it</li><li>The free gift page is the thing I update, not twelve automations</li><li>The audit is bookable by people who have never been in here</li></ul></div>
+    <div class="bk"><h3>01 · Evergreen</h3><p>Prices change. Doors open and close. Offers get retired. An automation that says "join my community at $33" breaks the day any of that moves. One that hands over a free gift and a booking link runs for a year without you touching it.</p><ul><li>Nothing in the DM has a price or a date in it</li><li>The free gift page is the thing I update, not twelve automations</li><li>The next step is bookable by people who have never been in your community</li></ul></div>
     <div class="bk"><h3>02 · Friction</h3><p>Every stage names who it's for. Established platform, proven client results, already creating. If that's not you yet, you still get all the free stuff. You just don't get invited to a call you'd feel behind on.</p><ul><li>Bio CTA: book your audit</li><li>DM: "if you're an established creator with proven client results"</li><li>Free gift: audit link top and bottom, the qualifier above it</li></ul></div>
     <div class="bk"><h3>03 · Trust</h3><p>The free gift is every free training and guide I've ever made, on one page. Video trainings, cheat sheets, the 4 Stages of Ads, Human Design and astrology for business. Someone who works through even a third of it knows exactly how I think before they book.</p><ul><li>Thirty-plus gems, nothing gated</li><li>The audit sells itself off the back of it</li><li>Or it doesn't, and they got thirty free things. Fine.</li></ul></div>
   </div>
+  <div class="receipt-card">
+    <div><i>The receipt · September 2026</i><b>My Instagram got hacked. I rebuilt it from zero with exactly this.</b><p>Seven hundred followers back in thirty days on a brand-new account, and Instagram is still my number one signup source at 33% of new members. Every sales campaign is paused while I close the doors to the community. The only paid traffic running is these two campaigns at $7 a day each, plus Skool Growth Boost.</p></div>
+    <div class="rc-nums"><div><b class="num">$14</b><span>a day, total</span></div><div><b class="num">700</b><span>followers in 30 days</span></div><div><b class="num">33%</b><span>of signups from IG</span></div><div><b class="num">0</b><span>sales campaigns</span></div></div>
+  </div>
   <p class="pull">Traffic buys the follow. Engagement buys the comment. ManyChat asks for the follow again before it hands over the link. Two campaigns, one automation, and the audience compounds.</p>
-  <p class="note"><b>The number.</b> $14 a day is $420 a month. Last month Instagram was 33% of all signups, on an account that was at zero followers thirty days ago. I'm not telling you that's the flex. I'm telling you the mechanism is cheap enough that there's no reason not to run it.</p>
+  <p class="note"><b>The number.</b> $14 a day is $420 a month. I'm not telling you that's the flex. I'm telling you the mechanism is cheap enough that there's no reason not to run it, and it kept working on an account that had zero followers a month ago.</p>
 </section>
 
 <!-- ================= 07 YOUR VERSION + CTA ================= -->
@@ -598,13 +610,13 @@ footer a{color:var(--lav);text-decoration:none}
   </div>
 
   <div class="cta">
-    <p class="kicker">Three doors, one deadline</p>
-    <h2>Doors close October 7. <span class="g">The automations run either way.</span></h2>
+    <p class="kicker">Three doors</p>
+    <h2>Build it this week. <span class="g">Then let it run.</span></h2>
     <p>If you're an expert with an established platform and you want the room that pays you to exist on repeat for what you already know, love and do, these are the ways in.</p>
     <div class="paths">
       <a class="path" href="https://cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open" target="_blank" rel="noopener"><i>60 minutes · 1:1</i><b>Book a Strategy Audit</b><span>Bring your reels, your keyword and your numbers. We find the one thing that already pays and point the campaigns at it. Tue, Wed, Thu only.</span><em>Book the audit →</em></a>
       <a class="path" href="https://aefieldi.github.io/freegift/" target="_blank" rel="noopener"><i>Free · no login</i><b>Every Gem I Use</b><span>Thirty-plus trainings and guides on one page. The same thing my ManyChat sends to new followers. Send it to the friend who's still doing this by hand.</span><em>Open the free gift →</em></a>
-      <a class="path" href="https://www.skool.com/amanda/about" target="_blank" rel="noopener"><i>Doors close October 7</i><b>Spiritual Business Skool</b><span>Standard $33. Premium $97. VIP $333. No trial. Ads By Design, the Treasure Chest and the BTS classroom this page came from are all inside.</span><em>Send them the link →</em></a>
+      <a class="path" href="https://www.skool.com/amanda/about" target="_blank" rel="noopener"><i>The community</i><b>Spiritual Business Skool</b><span>Ads By Design, the AI Marketing Treasure Chest, and the behind-the-scenes classroom where I build pages like this one live, all inside.</span><em>Send them the link →</em></a>
     </div>
     <p class="sub">Comment ADS on the reel and my automation will send you the 4 Stages guide. Yes, the one you just watched me build.</p>
   </div>
@@ -613,7 +625,7 @@ footer a{color:var(--lav);text-decoration:none}
 </main>
 
 <footer class="wrap">
-  <span>Day 2 · Traffic + Engagement Campaigns · Behind the scenes</span>
+  <span>The Ultimate Traffic + Engagement Campaign Cheat Sheet</span>
   <span><a href="https://www.skool.com/amanda" target="_blank" rel="noopener">skool.com/amanda</a> · @amandafielding.smith</span>
 </footer>
 
@@ -636,14 +648,6 @@ function copyText(text, okEl){
   if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function(){ fallback(); done(); });
   else { fallback(); done(); }
 }
-
-/* ---------------- countdown ---------------- */
-(function(){
-  var CLOSE = new Date(2026, 9, 7), now = new Date();
-  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-  var d = Math.round((CLOSE - today) / 86400000);
-  $("#cdTally").textContent = d > 0 ? d : 0;
-})();
 
 /* ---------------- checklists ---------------- */
 var LISTS = {
