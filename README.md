@@ -1,6 +1,6 @@
-# BTS
+# Behind the Scenes
 
-Behind-the-scenes artifacts for Spiritual Business Skool.
+Amanda Fielding-Smith's behind-the-scenes pages for the Closing Doors + Audit launch, Spiritual Business Skool.
 
-- `index.html` — Closing Doors + Audit Launch (Sept 24, 2026)
-- `loom-recording-spine.md` — beat-by-beat guide for the Loom walkthrough
+- Day 1 · Closing Doors + Audit Launch: https://aefieldi.github.io/BTS/
+- Day 2 · Traffic + Engagement Campaigns: https://aefieldi.github.io/BTS/day-2/

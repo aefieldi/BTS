@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day 2: Traffic + Engagement Campaigns</title>
+<meta name="description" content="How Amanda regrew a hacked Instagram with two $7-a-day Meta campaigns and two ManyChat automations. Every click, as a checklist, with the Tier 1 country list ready to paste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;1,500;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Single-theme night sky, the brand. Every colour painted explicitly. */
+:root{
+  --night:#0D0D1A; --night2:#14142A; --panel:#1A1A30; --panel2:#23233F;
+  --lav:#C5B8E8; --violL:#B88CED; --viol:#8B5FC7;
+  --mint:#7EECD4; --mintDeep:#3FBF95;
+  --pink:#E8A0E8; --gold:#E8C36A; --coral:#F08A7A;
+  --txt:#EDEAF6; --txt2:#BDB8D4; --txt3:#8C87A6;
+  --line:rgba(197,184,232,.14); --line2:rgba(197,184,232,.28);
+  --hl:linear-gradient(90deg,var(--violL),var(--pink),var(--mint));
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'Space Mono',ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;background:var(--night)}
+body{
+  background:
+    radial-gradient(900px 600px at 8% -8%, rgba(139,95,199,.30), transparent 62%),
+    radial-gradient(700px 520px at 96% 6%, rgba(232,160,232,.12), transparent 60%),
+    radial-gradient(800px 600px at 80% 100%, rgba(63,191,149,.08), transparent 62%),
+    var(--night);
+  background-attachment:fixed;
+  color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;margin:0;
+}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--pink);margin:0}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--mint)}
+button{font:inherit;color:inherit}
+input,textarea,select{font:inherit}
+:focus-visible{outline:2px solid var(--mint);outline-offset:3px;border-radius:6px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.g{display:block;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.06em}
+h2 .g{display:inline}
+
+/* ---------- hero ---------- */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-block:56px 36px}
+.hero h1{font-size:clamp(40px,6vw,72px);line-height:1.02;font-weight:800;margin-block:16px 16px}
+.hero h1 .g{font-size:1.06em;line-height:1.05}
+.hero .tag{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(22px,2.7vw,30px);line-height:1.2;color:var(--gold);margin-bottom:16px}
+.hero .lead{font-size:clamp(17px,1.7vw,19.5px);color:var(--txt2);max-width:34em}
+.byline{margin-top:22px;color:var(--txt3);font-size:14.5px;line-height:1.55;max-width:36em}
+.byline b{color:var(--txt);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;border:1px solid var(--line2);background:transparent;cursor:pointer;font-weight:600;font-size:15px;text-decoration:none;color:var(--txt);transition:background .2s,border-color .2s,transform .15s}
+.btn:hover{background:rgba(197,184,232,.08);border-color:var(--lav)}
+.btn.primary{background:var(--txt);color:var(--night);border-color:var(--txt)}
+.btn.primary:hover{background:var(--mint);border-color:var(--mint)}
+.btn.glow{background:linear-gradient(90deg,var(--viol),var(--pink));border-color:transparent;color:#fff;box-shadow:0 10px 30px rgba(139,95,199,.35)}
+.btn.glow:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(217,127,217,.4)}
+.btn.sm{padding:7px 14px;font-size:13px}
+
+/* progress door */
+.door-wrap{justify-self:center;width:100%;max-width:400px}
+.door{position:relative;border-radius:28px;padding:30px 28px 26px;border:1px solid var(--line2);
+  background:linear-gradient(160deg,rgba(139,95,199,.28),rgba(26,26,48,.7) 55%,rgba(63,191,149,.10));overflow:hidden}
+.door::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(197,184,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(197,184,232,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.door > *{position:relative}
+.door .kicker{color:var(--lav)}
+.door .big{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(84px,12vw,124px);line-height:.9;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;margin-top:10px;font-variant-numeric:lining-nums}
+.door .unit{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt);margin-top:4px}
+.door .date{margin-top:16px;color:var(--txt2);font-size:15px;line-height:1.5}
+.door .date b{color:var(--gold);font-weight:600}
+.door .mini{display:grid;gap:6px;margin-top:16px}
+.door .mini div{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;font-size:13px;color:var(--txt2)}
+.door .mini i{display:block;height:5px;border-radius:999px;background:rgba(35,35,63,.9);overflow:hidden;grid-column:1/-1}
+.door .mini i b{display:block;height:100%;width:0;background:var(--hl);transition:width .35s}
+.door .mini span{font-family:var(--mono);font-size:11px;color:var(--txt3)}
+.stars{position:absolute;inset:0;pointer-events:none}
+.stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;opacity:.5;animation:tw 3.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25;transform:scale(.8)}50%{opacity:.9;transform:scale(1.2)}}
+
+/* ---------- tally ---------- */
+.tally{display:flex;flex-wrap:wrap;border:1px solid var(--line2);border-radius:22px;overflow:hidden;background:rgba(26,26,48,.55);margin-bottom:44px}
+.tally div{flex:1 1 150px;padding:18px 18px 16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0;display:flex;flex-direction:column;gap:2px}
+.tally b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(36px,4vw,50px);line-height:1;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em;font-variant-numeric:lining-nums}
+.tally span{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt);margin-top:6px}
+.tally small{font-size:13px;color:var(--txt3);line-height:1.35}
+
+/* ---------- sticky nav ---------- */
+.snav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(13,13,26,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.snav .wrap{display:flex;align-items:center;gap:12px}
+.snav-scroll{display:flex;gap:4px;overflow-x:auto;padding-block:10px;scrollbar-width:none;flex:1;min-width:0}
+.snav-scroll::-webkit-scrollbar{display:none}
+.snav a{flex:none;display:flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;text-decoration:none;color:var(--txt2);font-size:13px;border:1px solid transparent;white-space:nowrap}
+.snav a i{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--lav)}
+.snav a:hover{color:var(--txt);border-color:var(--line2)}
+.snav a.cur{color:var(--night);background:var(--lav)}
+.snav a.cur i{color:var(--night)}
+.snav .pct{flex:none;font-family:var(--mono);font-size:12px;color:var(--mint);white-space:nowrap}
+
+/* ---------- sections ---------- */
+.sec{padding-block:64px;border-bottom:1px solid var(--line);scroll-margin-top:62px}
+.sec-head{display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:start;margin-bottom:30px}
+.big-n{font-family:var(--serif);font-style:italic;font-weight:700;font-size:clamp(66px,9vw,108px);line-height:.82;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;width:1.3em;text-align:center;padding-right:.06em}
+.sec-lbl{display:block;font-family:var(--mono);font-size:11px;color:var(--txt3);letter-spacing:.16em;margin-top:12px;text-align:center;text-transform:uppercase}
+.sec h2{font-size:clamp(27px,3.6vw,44px);font-weight:700;line-height:1.08;margin-block:10px 14px}
+.sec .runs{color:var(--txt2);font-size:16.5px;max-width:40em}
+.sec .runs + .runs{margin-top:12px}
+.pull{margin-top:20px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(21px,2.4vw,28px);line-height:1.25;color:var(--gold);max-width:22em}
+.note{margin-top:18px;color:var(--txt3);font-size:14px;max-width:52em}
+.note b{color:var(--txt2)}
+
+/* ---------- meta strip (campaign settings at a glance) ---------- */
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:26px}
+.meta div{padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.meta i{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:4px}
+.meta b{display:block;font-weight:600;line-height:1.3;font-size:15px}
+.meta small{display:block;color:var(--txt3);font-size:12.5px;line-height:1.4;margin-top:3px}
+
+/* ---------- checklist ---------- */
+.prog-lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px;display:flex;justify-content:space-between;gap:10px}
+.prog{height:8px;border-radius:999px;background:rgba(35,35,63,.8);overflow:hidden;margin-bottom:22px;border:1px solid var(--line)}
+.prog i{display:block;height:100%;width:0;background:var(--hl);transition:width .35s}
+.area{margin-top:26px}
+.area:first-child{margin-top:0}
+.area h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.area h3 i{font-style:normal;color:var(--txt3);font-weight:400;letter-spacing:.1em}
+.items{display:grid;gap:8px}
+.it{border:1px solid var(--line);border-radius:16px;background:rgba(26,26,48,.5);overflow:hidden;transition:border-color .2s}
+.it:hover{border-color:var(--line2)}
+.it[data-checked="true"]{border-color:rgba(63,191,149,.35)}
+.it-row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:start;padding:14px 16px;cursor:pointer;width:100%;background:transparent;border:0;text-align:left}
+.box{flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--txt3);margin-top:3px;position:relative;transition:background .2s,border-color .2s}
+.it[data-checked="true"] .box{background:var(--mintDeep);border-color:var(--mintDeep)}
+.it[data-checked="true"] .box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border-right:2px solid var(--night);border-bottom:2px solid var(--night);transform:rotate(42deg)}
+.it[data-checked="true"] .it-row b{color:var(--txt2)}
+.it-row b{display:block;font-weight:600;color:var(--txt);line-height:1.35}
+.it-row small{display:block;color:var(--txt3);font-size:13.5px;line-height:1.45;margin-top:3px}
+.it-row small em{color:var(--txt2);font-style:normal}
+.it-row .n{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--lav);margin-right:8px}
+.badge{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--line2);color:var(--txt2);margin-top:4px;white-space:nowrap}
+.badge.opt{color:var(--lav);border-color:rgba(197,184,232,.4)}
+.badge.trap{color:var(--coral);border-color:rgba(240,138,122,.45)}
+.badge.key{color:var(--gold);border-color:rgba(232,195,106,.45)}
+.badge.paste{color:var(--mint);border-color:rgba(126,236,212,.4)}
+.it-why{display:none;padding:0 16px 16px 50px;color:var(--txt2);font-size:14.5px;line-height:1.55}
+.it[data-open="true"] .it-why{display:block}
+.it-why div{padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(35,35,63,.45)}
+.it-why h4{margin:0 0 4px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--pink)}
+.list-tools{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.list-tools button{border:0;background:transparent;color:var(--txt3);font-size:12.5px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:4px}
+.list-tools button:hover{color:var(--txt)}
+
+/* ---------- side-by-side ---------- */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start}
+.two > .items-wrap{min-width:0}
+.card{min-width:0;border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55)}
+.card h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav);font-weight:700}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:999px;padding:3px;gap:2px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:6px 14px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:600;color:var(--txt2)}
+.seg button[aria-pressed="true"]{background:var(--lav);color:var(--night)}
+.sticky{position:sticky;top:70px}
+
+/* ---------- country builder ---------- */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{border:1px solid var(--line2);background:rgba(35,35,63,.5);color:var(--txt2);padding:5px 11px;border-radius:999px;font-size:13px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.chip[aria-pressed="true"]{background:rgba(63,191,149,.22);border-color:var(--mint);color:var(--txt)}
+.chip .r{font-family:var(--mono);font-size:10px;color:var(--txt3);margin-right:6px}
+.chip[aria-pressed="true"] .r{color:var(--mint)}
+.out{margin-top:14px}
+.out textarea{width:100%;min-height:150px;border:1px solid var(--line2);background:rgba(13,13,26,.6);color:var(--txt);border-radius:12px;padding:12px 14px;font-family:var(--mono);font-size:12.5px;line-height:1.6;resize:vertical}
+.out-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}
+.count{font-family:var(--mono);font-size:12px;color:var(--txt3)}
+.count b{color:var(--mint);font-weight:700}
+.ok{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mint)}
+.groups{display:grid;gap:12px;margin-top:14px}
+.grp i{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3);margin-bottom:6px}
+
+/* ---------- reel tracker ---------- */
+.track{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0 6px;margin-top:6px}
+.track th{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);font-weight:400;text-align:left;padding:0 10px}
+.track th.c,.track td.c{text-align:center;width:64px}
+.track td{background:rgba(26,26,48,.5);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:middle}
+.track td:first-child{border-left:1px solid var(--line);border-radius:12px 0 0 12px}
+.track td:last-child{border-right:1px solid var(--line);border-radius:0 12px 12px 0;width:32px;padding-inline:2px}
+.track input{width:100%;min-width:0;border:0;background:transparent;color:var(--txt);padding:6px 4px;font-size:14.5px}
+.track input.kw{font-family:var(--mono);font-size:12.5px;text-transform:uppercase;color:var(--gold)}
+.track th.k,.track td.k{width:96px}
+.track input::placeholder{color:var(--txt3)}
+.tick{width:24px;height:24px;border-radius:7px;border:1.5px solid var(--txt3);background:transparent;cursor:pointer;position:relative;padding:0;vertical-align:middle}
+.tick[aria-pressed="true"]{background:var(--mintDeep);border-color:var(--mintDeep)}
+.tick[aria-pressed="true"]::after{content:"";position:absolute;left:8px;top:3px;width:6px;height:12px;border-right:2px solid var(--night);border-bottom:2px solid var(--night);transform:rotate(42deg)}
+.tick.win[aria-pressed="true"]{background:var(--gold);border-color:var(--gold)}
+.x{border:0;background:transparent;color:var(--txt3);cursor:pointer;font-size:18px;line-height:1;padding:4px}
+.x:hover{color:var(--coral)}
+.track-read{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--txt2);display:flex;gap:18px;flex-wrap:wrap}
+.track-read b{font-family:var(--serif);font-style:italic;font-weight:700;font-size:24px;background:var(--hl);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+
+/* ---------- DM script builder ---------- */
+.form{border:1px solid var(--line2);border-radius:22px;padding:22px;background:rgba(26,26,48,.55);display:grid;gap:14px}
+.form h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--lav);font-weight:700}
+.form label{display:grid;gap:6px;font-size:13px;color:var(--txt3)}
+.form input,.form textarea,.form select{width:100%;border:1px solid var(--line2);background:rgba(13,13,26,.6);color:var(--txt);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.form textarea{resize:vertical;min-height:58px}
+.form select{appearance:none;-webkit-appearance:none}
+.form .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.form .hint{font-size:12.5px;color:var(--txt3);line-height:1.45}
+.phone{border:1px solid var(--line2);border-radius:26px;padding:18px 16px;background:rgba(13,13,26,.55);display:grid;gap:10px;max-width:420px;margin:0 auto;width:100%}
+.phone .ph-top{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3);text-align:center;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.bub{max-width:88%;padding:11px 14px;border-radius:18px;font-size:14px;line-height:1.5;color:var(--txt);white-space:pre-wrap;word-wrap:break-word}
+.bub.me{align-self:flex-start;background:rgba(35,35,63,.9);border:1px solid var(--line);border-bottom-left-radius:6px}
+.bub.them{align-self:flex-end;background:linear-gradient(135deg,var(--viol),var(--violL));border-bottom-right-radius:6px;color:#fff}
+.bub.cmt{align-self:stretch;max-width:100%;background:transparent;border:1px dashed var(--line2);color:var(--txt2);font-size:13px}
+.bub.cmt i{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--pink);margin-bottom:3px}
+.bub .btn-ish{display:block;margin-top:8px;padding:8px 12px;border-radius:10px;border:1px solid var(--mint);color:var(--mint);text-align:center;font-weight:600;font-size:13px}
+.bub a{color:var(--mint);word-break:break-all}
+.bub.them a{color:#fff}
+.phone .stack{display:flex;flex-direction:column;gap:8px}
+.step-lbl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3);margin-top:4px}
+
+/* ---------- flow ---------- */
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-top:8px}
+.fl{position:relative;padding:16px 14px 14px;border-radius:16px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.fl i{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.fl b{display:block;font-weight:600;line-height:1.3;font-size:14.5px}
+.fl span{display:block;color:var(--txt3);font-size:12.5px;line-height:1.4;margin-top:4px}
+.fl.paid{border-color:rgba(232,195,106,.4)}
+.fl.paid i{color:var(--gold)}
+.fl.end{border-color:rgba(126,236,212,.45);background:linear-gradient(150deg,rgba(63,191,149,.18),rgba(26,26,48,.5) 70%)}
+.fl.end i{color:var(--mint)}
+.buckets{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:26px}
+.bk{border-radius:18px;padding:20px 22px;border:1px solid var(--line);background:rgba(26,26,48,.5)}
+.bk h3{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;margin-bottom:10px;color:var(--mint)}
+.bk p{color:var(--txt2);font-size:14.5px}
+.bk ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px}
+.bk li{position:relative;padding-left:18px;color:var(--txt2);font-size:14px}
+.bk li::before{content:"";position:absolute;left:0;top:.7em;width:7px;height:7px;border-radius:50%;background:var(--viol)}
+
+/* ---------- tools ---------- */
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:22px}
+.tool{display:block;text-decoration:none;color:var(--txt);border:1px solid var(--line);border-radius:16px;padding:16px 18px;background:rgba(26,26,48,.5);transition:border-color .2s,transform .2s}
+.tool:hover{border-color:var(--mint);transform:translateY(-2px)}
+.tool i{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);margin-bottom:5px}
+.tool b{display:block;font-weight:600;font-size:15px}
+.tool span{display:block;color:var(--txt3);font-size:12.5px;line-height:1.4;margin-top:4px}
+.tool em{display:inline-block;margin-top:8px;font-style:normal;font-weight:600;color:var(--mint);font-size:13px}
+
+/* ---------- worksheet + cta ---------- */
+.ws{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start;margin-top:8px}
+.commit{border:1px solid var(--line2);border-radius:22px;padding:26px;background:linear-gradient(160deg,rgba(139,95,199,.25),rgba(26,26,48,.6) 60%);position:relative;overflow:hidden}
+.commit .kicker{color:var(--lav)}
+.commit p.big{font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(20px,2.3vw,26px);line-height:1.3;color:var(--txt);margin-top:12px;min-height:5em}
+.commit p.big b{color:var(--gold);font-weight:700}
+.commit .ctools{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;align-items:center}
+.cta{border-radius:26px;padding:34px 30px;border:1px solid var(--line2);position:relative;overflow:hidden;margin-top:34px;
+  background:linear-gradient(150deg,rgba(139,95,199,.35),rgba(26,26,48,.75) 50%,rgba(63,191,149,.15))}
+.cta::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(197,184,232,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(197,184,232,.06) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.cta > *{position:relative}
+.cta .kicker{color:var(--lav)}
+.cta h2{font-size:clamp(28px,3.6vw,44px);font-weight:800;line-height:1.08;margin-block:10px 12px}
+.cta p{color:var(--txt2);max-width:38em;font-size:16px}
+.cta .paths{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:24px}
+.path{display:block;text-decoration:none;color:var(--txt);border:1px solid var(--line2);border-radius:18px;padding:18px 20px;background:rgba(13,13,26,.45);transition:border-color .2s,transform .2s}
+.path:hover{border-color:var(--mint);transform:translateY(-2px)}
+.path i{display:block;font-family:var(--mono);font-style:normal;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:6px}
+.path b{display:block;font-weight:700;font-size:17px;line-height:1.25}
+.path span{display:block;color:var(--txt3);font-size:13.5px;margin-top:6px;line-height:1.45}
+.path em{display:inline-block;margin-top:12px;font-style:normal;font-weight:600;color:var(--mint);font-size:14px}
+.cta .sub{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3);margin-top:18px}
+
+footer{padding:34px 0 46px;color:var(--txt3);font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:var(--lav);text-decoration:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .hero,.two,.ws{grid-template-columns:minmax(0,1fr)}
+  .hero{padding-block:36px 26px;gap:26px}
+  .door-wrap{max-width:100%}
+  .sec{padding-block:44px}
+  .sec-head{grid-template-columns:1fr;gap:6px}
+  .big-n{width:auto;text-align:left;font-size:56px}
+  .sec-lbl{text-align:left;margin-top:4px}
+  .it-why{padding-left:16px}
+  .form .row2{grid-template-columns:1fr}
+  .sticky{position:static}
+  .snav .pct{display:none}
+  .track th.c,.track td.c{width:44px}
+  .track th.k,.track td.k{width:72px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="wrap hero">
+  <div>
+    <p class="kicker">Behind the scenes · Day 2 · September 25, 2026</p>
+    <h1>$14 a day. <span class="g">Zero sales campaigns.</span></h1>
+    <p class="tag">How I'm regrowing a hacked Instagram and delivering every freebie on autopilot.</p>
+    <p class="lead">My Instagram got hacked a month ago. I rebuilt it from zero to 700 followers and it is still my number one signup source. The reason is two boring little Meta campaigns and two ManyChat automations. This is every click, in order, with checkboxes, so you can build yours while I add to mine.</p>
+    <p class="byline"><b>Doors close October 7 and I've paused every sales campaign.</b> Growth Boost brings people into Skool. Traffic and engagement grow the audience and deliver the gems. That's the whole paid plan right now, and it costs less than lunch.</p>
+    <div class="actions">
+      <a class="btn primary" href="#prep">Start the checklist</a>
+      <a class="btn" href="#countries">Get the Tier 1 country list</a>
+    </div>
+  </div>
+  <div class="door-wrap">
+    <div class="door" aria-live="polite">
+      <div class="stars" aria-hidden="true">
+        <i style="left:12%;top:18%"></i><i style="left:78%;top:12%;animation-delay:.8s"></i><i style="left:88%;top:44%;animation-delay:1.6s"></i>
+        <i style="left:22%;top:72%;animation-delay:2.2s"></i><i style="left:60%;top:84%;animation-delay:1.1s"></i><i style="left:40%;top:8%;animation-delay:2.8s"></i>
+      </div>
+      <p class="kicker">Your setup</p>
+      <div class="big num" id="heroPct">0%</div>
+      <div class="unit" id="heroUnit">of 58 steps done</div>
+      <div class="mini" id="heroMini"></div>
+      <p class="date">Checkboxes save in this browser. Come back, keep going. <b>Reset</b> lives at the bottom of each list.</p>
+    </div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="tally" aria-label="The setup at a glance">
+    <div><b class="num">$7</b><span>a day · traffic</span><small>Instagram profile visits. Buys the follow.</small></div>
+    <div><b class="num">$7</b><span>a day · engagement</span><small>Comments on the reel. Fires ManyChat.</small></div>
+    <div><b class="num">27</b><span>tier 1 countries</span><small>Pasted in bulk into both campaigns. List below.</small></div>
+    <div><b class="num">700</b><span>followers back</span><small>From zero in 30 days, on a hacked account.</small></div>
+    <div><b class="num" id="cdTally">12</b><span>days left</span><small>Until the doors close on October 7.</small></div>
+  </div>
+</section>
+
+<!-- ================= NAV ================= -->
+<nav class="snav" aria-label="Sections">
+  <div class="wrap">
+    <div class="snav-scroll">
+      <a href="#prep"><i>01</i>Before you start</a>
+      <a href="#traffic"><i>02</i>Traffic campaign</a>
+      <a href="#engage"><i>03</i>Engagement campaign</a>
+      <a href="#add"><i>04</i>Adding new reels</a>
+      <a href="#manychat"><i>05</i>ManyChat</a>
+      <a href="#why"><i>06</i>Why it's built this way</a>
+      <a href="#yours"><i>07</i>Your version</a>
+    </div>
+    <span class="pct num" id="navPct">0% done</span>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ================= 01 BEFORE YOU START ================= -->
+<section class="sec" id="prep">
+  <div class="sec-head">
+    <div><div class="big-n">01</div><span class="sec-lbl">Before you start</span></div>
+    <div>
+      <p class="kicker">Seven things, then it's all clicking</p>
+      <h2>The campaigns are easy. <span class="g">The setup around them is the work.</span></h2>
+      <p class="runs">A traffic campaign sends people to your profile. An engagement campaign buys comments on a reel. Neither one does anything unless the reel asks for a comment, there's a gem behind the word, and ManyChat is there to hand it over. Get these seven in place first.</p>
+    </div>
+  </div>
+  <div class="prog-lbl"><span id="pl-prep">0 of 7</span><span class="num" id="pp-prep">0%</span></div>
+  <div class="prog" aria-hidden="true"><i id="pb-prep"></i></div>
+  <div id="list-prep"></div>
+  <div class="tools">
+    <a class="tool" href="https://adsmanager.facebook.com" target="_blank" rel="noopener"><i>Where the campaigns live</i><b>Meta Ads Manager</b><span>Both campaigns, both at the manual setting. Not Advantage+.</span><em>Open Ads Manager →</em></a>
+    <a class="tool" href="https://manychat.com" target="_blank" rel="noopener"><i>Where the gems get delivered</i><b>ManyChat</b><span>Comment a word, get a DM. Free plan to start. Connect the Instagram channel first.</span><em>Open ManyChat →</em></a>
+    <a class="tool" href="https://aefieldi.github.io/4-stages-of-ads/" target="_blank" rel="noopener"><i>The bigger picture</i><b>4 Stages of Ads to Your Skool</b><span>Today is Stage 03, always on. If you haven't run Stage 01 yet, read this first.</span><em>Open the guide →</em></a>
+    <a class="tool" href="https://aefieldi.github.io/freegift/" target="_blank" rel="noopener"><i>What my automations now send</i><b>Every Gem I Use · the free gift</b><span>Thirty-plus trainings and guides on one page, with the audit link top and bottom.</span><em>See the free gift →</em></a>
+  </div>
+</section>
+
+<!-- ================= 02 TRAFFIC ================= -->
+<section class="sec" id="traffic">
+  <div class="sec-head">
+    <div><div class="big-n">02</div><span class="sec-lbl">Traffic campaign</span></div>
+    <div>
+      <p class="kicker">Instagram profile visits · $7 a day</p>
+      <h2>You can't force a follow. <span class="g">You can send them to the door.</span></h2>
+      <p class="runs">The traffic campaign's only job is to put your profile in front of the right people, in the right countries, on Instagram only. Everything below is a click in Ads Manager. Tap a line for the why.</p>
+    </div>
+  </div>
+  <div class="meta">
+    <div><i>Objective</i><b>Traffic · manual</b><small>Not Advantage+</small></div>
+    <div><i>Conversion location</i><b>Instagram or Facebook</b><small>Then untick the Facebook page</small></div>
+    <div><i>Placements</i><b>Instagram only</b><small>Manual. Excluded spending off</small></div>
+    <div><i>Creative</i><b>Use existing post</b><small>One reel per ad</small></div>
+    <div><i>Budget</i><b>$5 to $7 a day</b><small>Always on, never a launch</small></div>
+  </div>
+  <div class="two">
+    <div class="items-wrap">
+      <div class="prog-lbl"><span id="pl-traffic">0 of 15</span><span class="num" id="pp-traffic">0%</span></div>
+      <div class="prog" aria-hidden="true"><i id="pb-traffic"></i></div>
+      <div id="list-traffic"></div>
+    </div>
+    <div class="sticky" id="countries">
+      <div class="card">
+        <div class="card-top">
+          <h3>Tier 1 country list · build and paste</h3>
+          <div class="seg" role="group" aria-label="Preset">
+            <button type="button" data-preset="us" aria-pressed="false">US only</button>
+            <button type="button" data-preset="big4" aria-pressed="false">Big Four</button>
+            <button type="button" data-preset="all" aria-pressed="true">All Tier 1</button>
+          </div>
+        </div>
+        <p class="hint" style="font-size:13px;color:var(--txt3);line-height:1.5">Three ways to run it. Just the US if that's where your people are. The Big Four if you want English-speaking only. All Tier 1 if you want the spending power, which is what I do. Tap a country to drop it. I don't see anyone from Japan, Singapore or South Korea, so those are the ones I'd cut first.</p>
+        <div class="groups" id="chipGroups"></div>
+        <div class="out">
+          <label class="sr" for="countryOut">Country list, one per line</label>
+          <textarea id="countryOut" readonly spellcheck="false"></textarea>
+          <div class="out-row">
+            <span class="count"><b id="cCount">27</b> countries selected</span>
+            <div style="display:flex;gap:8px;align-items:center">
+              <span class="ok" id="cOk" hidden>Copied</span>
+              <button class="btn primary sm" type="button" id="cCopy">Copy the list</button>
+            </div>
+          </div>
+        </div>
+        <p class="hint" style="font-size:12.5px;color:var(--txt3);line-height:1.45;margin-top:12px">In Ads Manager: Locations → <b style="color:var(--txt2)">Add locations in bulk</b> → paste → Location type: <b style="color:var(--txt2)">Countries</b> → <b style="color:var(--txt2)">Match locations</b>. Meta will match every line. If it adds extras you didn't paste, remove them by hand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 03 ENGAGEMENT ================= -->
+<section class="sec" id="engage">
+  <div class="sec-head">
+    <div><div class="big-n">03</div><span class="sec-lbl">Engagement campaign</span></div>
+    <div>
+      <p class="kicker">Comments on the reel · $7 a day</p>
+      <h2>This is the one that makes <span class="g">"comment [WORD]" actually work.</span></h2>
+      <p class="runs">Same countries, same Instagram-only placements. The difference is the conversion location: on your ad. You want the comment, because the comment is what fires ManyChat. There's no button on this ad on purpose.</p>
+    </div>
+  </div>
+  <div class="meta">
+    <div><i>Objective</i><b>Engagement · manual</b><small>Not Advantage+</small></div>
+    <div><i>Conversion location</i><b>On your ad</b><small>Not Messenger, not profile</small></div>
+    <div><i>Engagement type</i><b>Interactions</b><small>Goal: maximize interactions</small></div>
+    <div><i>Placements</i><b>Instagram only</b><small>Same as traffic</small></div>
+    <div><i>CTA on the ad</i><b>None</b><small>The comment is the CTA</small></div>
+  </div>
+  <div class="prog-lbl"><span id="pl-engage">0 of 14</span><span class="num" id="pp-engage">0%</span></div>
+  <div class="prog" aria-hidden="true"><i id="pb-engage"></i></div>
+  <div id="list-engage"></div>
+  <p class="note"><b>Why Instagram only, again.</b> I have no ManyChat on Facebook. If I pay for a Facebook comment I'll never answer it, and nobody gets the gem. Pay for the platform where the automation lives.</p>
+</section>
+
+<!-- ================= 04 ADDING NEW REELS ================= -->
+<section class="sec" id="add">
+  <div class="sec-head">
+    <div><div class="big-n">04</div><span class="sec-lbl">Adding new reels</span></div>
+    <div>
+      <p class="kicker">The routine, every time you post</p>
+      <h2>Duplicate, change post, publish. <span class="g">Every reel goes in both.</span></h2>
+      <p class="runs">You set the campaigns up once. After that, adding a new reel is a two-minute duplicate. The trap is a tiny checkbox Meta adds on every duplicate. Below the checklist is a tracker so you know which reel is in which campaign, because I lost track of mine on camera.</p>
+    </div>
+  </div>
+  <div class="two">
+    <div class="items-wrap">
+      <div class="prog-lbl"><span id="pl-add">0 of 10</span><span class="num" id="pp-add">0%</span></div>
+      <div class="prog" aria-hidden="true"><i id="pb-add"></i></div>
+      <div id="list-add"></div>
+    </div>
+    <div class="card sticky">
+      <div class="card-top">
+        <h3>Reel tracker · which reel is where</h3>
+        <button class="btn sm" type="button" id="trAdd">+ Add a reel</button>
+      </div>
+      <table class="track" id="trTable">
+        <thead><tr><th>Reel</th><th class="k">Keyword</th><th class="c">Traffic</th><th class="c">Engage</th><th class="c">Winner</th><th></th></tr></thead>
+        <tbody id="trBody"></tbody>
+      </table>
+      <div class="track-read"><span><b class="num" id="trBoth">0</b> in both</span><span><b class="num" id="trMissing">0</b> missing one</span><span><b class="num" id="trTotal">0</b> reels</span></div>
+      <p class="hint" style="font-size:12.5px;color:var(--txt3);line-height:1.45;margin-top:12px">Mark the winner when the results column tells you. Mine right now is the tourist reel, which is not the one I'd have guessed. That's the data doing its job.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 05 MANYCHAT ================= -->
+<section class="sec" id="manychat">
+  <div class="sec-head">
+    <div><div class="big-n">05</div><span class="sec-lbl">ManyChat</span></div>
+    <div>
+      <p class="kicker">Two automations, built once</p>
+      <h2>The ad buys the comment. <span class="g">ManyChat hands over the gem.</span></h2>
+      <p class="runs">One automation per keyword, plus one catch-all for the free gift. I duplicated my CONFESS automation into an ADS one, then built FREE GIFT so any future reel can use it. Both now send to the free gift page and the audit link instead of into Skool, because doors close October 7 and I want these to run for a year without me touching them.</p>
+    </div>
+  </div>
+  <div class="two">
+    <div class="items-wrap">
+      <div class="prog-lbl"><span id="pl-mc">0 of 12</span><span class="num" id="pp-mc">0%</span></div>
+      <div class="prog" aria-hidden="true"><i id="pb-mc"></i></div>
+      <div id="list-mc"></div>
+    </div>
+    <div>
+      <div class="form" id="dmForm">
+        <h3>DM script builder · yours</h3>
+        <div class="row2">
+          <label>Keyword <input id="dKw" value="ADS"></label>
+          <label>Your handle <input id="dHandle" value="@amandafielding.smith"></label>
+        </div>
+        <label>The gem they commented for <input id="dGem" value="the 4 Stages of Ads deep dive"></label>
+        <label>Link to the gem <input id="dGemUrl" value="https://aefieldi.github.io/4-stages-of-ads/"></label>
+        <label>Free gift link (leave blank to skip) <input id="dGiftUrl" value="https://aefieldi.github.io/freegift/"></label>
+        <label>Next step link (audit, community, or blank) <input id="dNextUrl" value="https://cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open"></label>
+        <label>Who the next step is for <input id="dQual" value="an established creator with proven client results"></label>
+        <p class="hint">Change the keyword and the gem and the whole script rewrites. Copy it, paste each bubble into the matching ManyChat block. The follow-ask stays. It's the reason the traffic campaign and the engagement campaign work as a pair.</p>
+        <div class="actions" style="margin-top:2px">
+          <button class="btn primary" type="button" id="dCopy">Copy the script</button>
+          <span class="ok" id="dOk" hidden>Copied</span>
+          <button class="btn" type="button" id="dReset">Reset to mine</button>
+        </div>
+      </div>
+      <div class="phone" id="phone" style="margin-top:18px">
+        <div class="ph-top">Instagram · live preview</div>
+        <div class="stack" id="phoneStack"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 06 WHY ================= -->
+<section class="sec" id="why">
+  <div class="sec-head">
+    <div><div class="big-n">06</div><span class="sec-lbl">Why it's built this way</span></div>
+    <div>
+      <p class="kicker">More friction, not less</p>
+      <h2>I stopped inviting people into Skool <span class="g">from the DM.</span></h2>
+      <p class="runs">That sounds backwards for someone closing her doors in twelve days. It isn't. I feel called to work with established entrepreneurs who already create content and already have momentum. So I'm qualifying them as early as I can: bio, then DM, then the free gift, then the audit. Every stage says the same thing: if you have this, this and this, book a call.</p>
+    </div>
+  </div>
+  <div class="flow" aria-label="The path from reel to audit">
+    <div class="fl paid"><i>Paid · $7/day</i><b>Traffic ad</b><span>Sends them to the profile. The bio says who this is for.</span></div>
+    <div class="fl paid"><i>Paid · $7/day</i><b>Engagement ad</b><span>Same reel. Buys the comment.</span></div>
+    <div class="fl"><i>Free</i><b>Comment the word</b><span>ManyChat replies publicly and opens the DM.</span></div>
+    <div class="fl"><i>Free</i><b>Follow first</b><span>The link waits until they follow. That's the growth.</span></div>
+    <div class="fl"><i>Free</i><b>Gem + free gift</b><span>The thing they asked for, plus thirty more.</span></div>
+    <div class="fl end"><i>The door</i><b>Strategy Audit</b><span>Linked at the top and bottom of the gift. Open to anyone, in or out of Skool.</span></div>
+  </div>
+  <div class="buckets">
+    <div class="bk"><h3>01 · Evergreen</h3><p>Doors close October 7. I don't know when they reopen, at what price, or with what inside. An automation that says "join Skool" breaks the day they close. One that hands over a free gift and an audit link runs for a year.</p><ul><li>Nothing in the DM has a date in it</li><li>The free gift page is the thing I update, not twelve automations</li><li>The audit is bookable by people who have never been in here</li></ul></div>
+    <div class="bk"><h3>02 · Friction</h3><p>Every stage names who it's for. Established platform, proven client results, already creating. If that's not you yet, you still get all the free stuff. You just don't get invited to a call you'd feel behind on.</p><ul><li>Bio CTA: book your audit</li><li>DM: "if you're an established creator with proven client results"</li><li>Free gift: audit link top and bottom, the qualifier above it</li></ul></div>
+    <div class="bk"><h3>03 · Trust</h3><p>The free gift is every free training and guide I've ever made, on one page. Video trainings, cheat sheets, the 4 Stages of Ads, Human Design and astrology for business. Someone who works through even a third of it knows exactly how I think before they book.</p><ul><li>Thirty-plus gems, nothing gated</li><li>The audit sells itself off the back of it</li><li>Or it doesn't, and they got thirty free things. Fine.</li></ul></div>
+  </div>
+  <p class="pull">Traffic buys the follow. Engagement buys the comment. ManyChat asks for the follow again before it hands over the link. Two campaigns, one automation, and the audience compounds.</p>
+  <p class="note"><b>The number.</b> $14 a day is $420 a month. Last month Instagram was 33% of all signups, on an account that was at zero followers thirty days ago. I'm not telling you that's the flex. I'm telling you the mechanism is cheap enough that there's no reason not to run it.</p>
+</section>
+
+<!-- ================= 07 YOUR VERSION + CTA ================= -->
+<section class="sec" id="yours" style="border-bottom:0">
+  <div class="sec-head">
+    <div><div class="big-n">07</div><span class="sec-lbl">Your version</span></div>
+    <div>
+      <p class="kicker">Four answers and you're ready to build</p>
+      <h2>There's no one right way. <span class="g">There's your way and consistency.</span></h2>
+      <p class="runs">You don't need my keyword, my countries or my budget. You need one reel that asks for a comment, one gem behind the word, and a decision about where the DM sends people. Fill these in and post your line under the video so I can hold you to it.</p>
+    </div>
+  </div>
+  <div class="ws">
+    <div class="form">
+      <h3>Four questions</h3>
+      <label>What's the gem, and what word do they comment to get it?
+        <input id="q1" placeholder="e.g. My Rising Sign Business Decoder. Comment RISING."></label>
+      <label>Which countries? US only, the Big Four, or all Tier 1?
+        <select id="q2">
+          <option value="">Choose one</option>
+          <option value="the US only">The US only</option>
+          <option value="the Big Four: US, Canada, UK and Australia">The Big Four</option>
+          <option value="all 27 Tier 1 countries">All Tier 1</option>
+        </select></label>
+      <label>Daily budget per campaign?
+        <input id="q3" placeholder="e.g. $5"></label>
+      <label>Where does the DM send them after the gem? Skool, a free gift page, or a call?
+        <input id="q4" placeholder="e.g. My free gift page, with the audit link at the bottom."></label>
+      <p class="hint">Saved in this browser only. Copy your line and post it in the comments.</p>
+    </div>
+    <div class="commit">
+      <p class="kicker">Your one-line commitment</p>
+      <p class="big" id="commitTxt">Fill in the four questions and your commitment writes itself here.</p>
+      <div class="ctools">
+        <button class="btn primary" type="button" id="copyCommit">Copy it</button>
+        <span class="ok" id="copyOk" hidden>Copied</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <p class="kicker">Three doors, one deadline</p>
+    <h2>Doors close October 7. <span class="g">The automations run either way.</span></h2>
+    <p>If you're an expert with an established platform and you want the room that pays you to exist on repeat for what you already know, love and do, these are the ways in.</p>
+    <div class="paths">
+      <a class="path" href="https://cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open" target="_blank" rel="noopener"><i>60 minutes · 1:1</i><b>Book a Strategy Audit</b><span>Bring your reels, your keyword and your numbers. We find the one thing that already pays and point the campaigns at it. Tue, Wed, Thu only.</span><em>Book the audit →</em></a>
+      <a class="path" href="https://aefieldi.github.io/freegift/" target="_blank" rel="noopener"><i>Free · no login</i><b>Every Gem I Use</b><span>Thirty-plus trainings and guides on one page. The same thing my ManyChat sends to new followers. Send it to the friend who's still doing this by hand.</span><em>Open the free gift →</em></a>
+      <a class="path" href="https://www.skool.com/amanda/about" target="_blank" rel="noopener"><i>Doors close October 7</i><b>Spiritual Business Skool</b><span>Standard $33. Premium $97. VIP $333. No trial. Ads By Design, the Treasure Chest and the BTS classroom this page came from are all inside.</span><em>Send them the link →</em></a>
+    </div>
+    <p class="sub">Comment ADS on the reel and my automation will send you the 4 Stages guide. Yes, the one you just watched me build.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <span>Day 2 · Traffic + Engagement Campaigns · Behind the scenes</span>
+  <span><a href="https://www.skool.com/amanda" target="_blank" rel="noopener">skool.com/amanda</a> · @amandafielding.smith</span>
+</footer>
+
+<script>
+(function(){
+"use strict";
+function $(s, r){ return (r || document).querySelector(s); }
+function $$(s, r){ return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
+function esc(s){ return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]; }); }
+function load(key, fallback){ try { var r = localStorage.getItem(key); return r ? JSON.parse(r) : fallback; } catch (e) { return fallback; } }
+function save(key, val){ try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+function copyText(text, okEl){
+  function done(){ if (!okEl) return; okEl.hidden = false; setTimeout(function(){ okEl.hidden = true; }, 1800); }
+  function fallback(){
+    var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly", "");
+    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function(){ fallback(); done(); });
+  else { fallback(); done(); }
+}
+
+/* ---------------- countdown ---------------- */
+(function(){
+  var CLOSE = new Date(2026, 9, 7), now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var d = Math.round((CLOSE - today) / 86400000);
+  $("#cdTally").textContent = d > 0 ? d : 0;
+})();
+
+/* ---------------- checklists ---------------- */
+var LISTS = {
+  prep: { name:"Before you start", groups:[
+    { h:"Seven things", items:[
+      { t:"Instagram is a professional account, connected to your Facebook page", d:"Ads Manager only sees your reels when the two are linked. Meta Business Suite → Settings → Instagram. The page itself never shows an ad; it's the plumbing.", w:"Every 'use existing post' step below reads from this connection. If the reel picker is empty later, this is why." },
+      { t:"You have reels that end in 'comment [WORD]'", d:"The engagement campaign buys comments. If the reel never asks for one, you're buying likes, and likes don't fire anything.", w:"My current ones: CONFESS for the Libra Rising guide, ADS for the 4 Stages of Ads. One word, one gem, said out loud and on screen.", b:"key" },
+      { t:"There's a gem behind the word", d:"One specific thing. A guide, a cheat sheet, a training, a page. The reel promotes it, the ad amplifies it, ManyChat delivers it.", w:"Make the gem first, then the reel. Not the other way round. A reel with nothing behind the word is a broken promise you paid to boost." },
+      { t:"ManyChat is connected to your Instagram", d:"manychat.com → add the Instagram channel → give it the permissions. The free plan is fine to start. Build the automation in section 05 before the ad goes live, not after.", w:"My account is new since the hack and some features still won't unlock. Two to three hours lost on a DM-all-new-followers flow it couldn't run. Comment automations work on day one." },
+      { t:"Budget decided: $5 to $7 a day, per campaign", d:"I run about $7 on each, $14 a day total. That's the whole paid budget while my sales campaigns are paused.", w:"These are always-on campaigns, not a launch. The number stays small and the reel list grows." },
+      { t:"Your Tier 1 country list is copied", d:"Build it in section 02 and copy it once. You paste the same list into both campaigns.", b:"paste" },
+      { t:"Optional: Skool Pro with the Meta pixel on your About page", d:"Only needed for the custom-audience step in the traffic campaign. If you don't have it, skip that step. Both campaigns work without it.", b:"opt" }
+    ]}
+  ]},
+  traffic: { name:"Traffic campaign", groups:[
+    { h:"Campaign level", i:"3 clicks", items:[
+      { t:"Create → Traffic → Continue" },
+      { t:"Choose Manual traffic campaign → Continue", d:"Not Advantage+. You want to control the locations and the placements yourself.", w:"Advantage+ will happily spend on Facebook and in countries you'll never sell to. Manual means every dollar goes where you point it." },
+      { t:"Change nothing else at the campaign level", d:"Name it if you want. Scroll past the rest. Continue to the ad set." }
+    ]},
+    { h:"Ad set level", i:"8 clicks", items:[
+      { t:"Conversion location: Instagram or Facebook", d:"The job of this campaign is profile visits. You can't force a follow. You can send them to the profile.", w:"The traffic campaign delivers the person to the door. The bio and the pinned reels do the rest. Fix those first if they're not doing their job." },
+      { t:"Deselect your Facebook page", d:"Leave only the Instagram account ticked. You want Instagram profile visits, nothing else." },
+      { t:"Locations: paste your Tier 1 list in bulk", d:"Add locations in bulk → paste → Location type: Countries → Match locations. The list builder is right here.", b:"paste", w:"You could run only the US if that's where your people are. Or the Big Four. I go for all Tier 1 because that's where the spending power is and I'd rather Meta find my people in Norway than miss them." },
+      { t:"Optional: include custom audiences", d:"Skool Pro with the pixel on: include your community purchasers and your lookalikes. That's people who visited your About page or joined in the last 180 days. Skip if you don't have it.", b:"opt", w:"Warm people who already visited the About page seeing my reels again in their feed. Cheap reminders." },
+      { t:"Placements: switch Advantage+ to Manual placements", d:"It's near the bottom of the ad set. Manual, every time." },
+      { t:"Under Platforms, untick Facebook", d:"Instagram only. You are paying for exactly one thing: Instagram profile visits.", b:"key" },
+      { t:"Untick 'Allow spending on excluded placements'", d:"Otherwise Meta quietly spends on Facebook anyway. This box undoes the one above it.", b:"trap" },
+      { t:"Daily budget: $7", d:"Or $5. Either works. This runs every day and you'll be adding reels to it for months." }
+    ]},
+    { h:"Ad level", i:"4 clicks", items:[
+      { t:"Ad setup: Use existing post, not Create ad", d:"The reel already lives on Instagram with its likes and comments. Don't upload a copy and start from zero social proof.", w:"Existing post means the ad's comments land on the real reel, where ManyChat is listening. A fresh upload would split them." },
+      { t:"Multi-advertiser ads: off", d:"It was already off for me. Sometimes Meta flips it back on. Check it every single time.", b:"trap" },
+      { t:"Select posts → toggle to Instagram → pick one reel", d:"One reel per ad. You'll duplicate for the rest in section 04. Continue." },
+      { t:"Name it anything. Publish.", d:"Mine is literally called 'Ads'. You all love my naming conventions. If Meta errors about a WhatsApp number, hit Try to publish with errors. That error is bullshit and the ad runs fine.", w:"Publish means the campaign is live at $7 a day. You can pause any time from the campaign list." }
+    ]}
+  ]},
+  engage: { name:"Engagement campaign", groups:[
+    { h:"Campaign level", i:"3 clicks", items:[
+      { t:"Create → Engagement → Continue" },
+      { t:"Choose Manual engagement campaign → Continue", d:"This is the one that gets people to comment the word so ManyChat can send the gem." },
+      { t:"Change nothing else at the campaign level", d:"Straight through to the ad set." }
+    ]},
+    { h:"Ad set level", i:"6 clicks", items:[
+      { t:"Conversion location: On your ad", d:"Not Messenger. Not the Instagram profile. You want them to comment on the video.", b:"key", w:"The comment is the whole point. It's the trigger ManyChat watches for. Every other conversion location sends them somewhere the automation can't see." },
+      { t:"Engagement type: Interactions" },
+      { t:"Performance goal: Maximize interactions", d:"Meta will look for people who comment, save and share. Those are the people you want." },
+      { t:"Locations: paste the same Tier 1 list", d:"Same paste, same three clicks. Add locations in bulk → Countries → Match locations.", b:"paste" },
+      { t:"Placements: Manual → untick Facebook → untick excluded spending", d:"Identical to the traffic campaign. I have no ManyChat on Facebook, so I'm not paying for comments I'll never answer.", w:"If you do run ManyChat on Facebook, you could leave it on. I don't, so I don't." },
+      { t:"Daily budget: $7" }
+    ]},
+    { h:"Ad level", i:"5 clicks", items:[
+      { t:"Your Instagram account selected → Use existing post", d:"Same as traffic. The reel lives on Instagram already." },
+      { t:"Change post → toggle to the Instagram tab", d:"The picker opens on Facebook by default. Flip it to Instagram or you'll see nothing." },
+      { t:"Start with your most recent reel that asks for a comment", d:"Newest first. If there are a few, do them all, one per ad." },
+      { t:"No button, no call-to-action on the ad", d:"A Learn More button sends them away from the comment box. The comment is the CTA.", b:"key" },
+      { t:"Publish. Try to publish with errors if it complains.", d:"Same WhatsApp nonsense. Ignore it." }
+    ]}
+  ]},
+  add: { name:"Adding new reels", groups:[
+    { h:"In either campaign", i:"every time you post", items:[
+      { t:"Open the campaign → tick one existing ad → Duplicate", d:"Don't build a new ad from scratch. Duplicate the one that already has the right settings." },
+      { t:"Set the number of copies to the number of new reels", d:"Four new reels, four copies. The picker lets you toggle it up and down." },
+      { t:"Untick 'Send Messenger message'", d:"Meta adds it on every duplicate. Left on, it turns your engagement ad into a Messenger ad and the comments dry up.", b:"trap" },
+      { t:"Continue to editor" },
+      { t:"On each copy: Change post → Instagram tab → untick the old reel → tick the new one", d:"It now lets you edit the primary text here too, which it didn't used to. Leave it or tweak it." },
+      { t:"Delete any copies you didn't fill", d:"I always make one too many. Delete it before you publish or it runs the old reel twice." },
+      { t:"Review and publish → Try to publish with errors" },
+      { t:"Repeat in the other campaign", d:"Every reel goes in both. Traffic buys the follow. Engagement buys the comment. One without the other is half the machine.", b:"key" },
+      { t:"Scan the ad list and switch off anything stale", d:"I found an old reel still running that I don't even promote anymore. Check the list every time you add to it." },
+      { t:"Note which reel is winning", d:"Look at the results column. For me right now it's the tourist reel. Not the one I'd have guessed. Mark it in the tracker so you make more like it." }
+    ]}
+  ]},
+  mc: { name:"ManyChat", groups:[
+    { h:"Automation one · the keyword", i:"one per reel", items:[
+      { t:"ManyChat → Automations → duplicate an existing comment automation", d:"Or New automation → Instagram → 'User comments on your post or reel'. I duplicated CONFESS to make ADS.", w:"Duplicating keeps the follow-ask and the delivery structure. You only change the keyword, the gem and the link." },
+      { t:"Trigger: any post or reel, keyword(s): your word", d:"Mine are ADS and AD. Add the singular, the plural and the obvious typo. People type fast.", b:"key" },
+      { t:"Reply to their comment publicly", d:"'Sent you a DM!' under the comment. This increases engagement on the reel, which makes the engagement ad cheaper.", w:"Public replies stack up under the reel. New viewers see forty people got the thing and comment too. Free social proof." },
+      { t:"Opening DM with one button: 'Send me the link'", d:"They have to tap before you can send the link. That tap is what keeps the DM allowed." },
+      { t:"Ask them to follow before the link", d:"'Follow me first so it doesn't get lost, then tap I'm following.' The link waits behind that button.", b:"key", w:"This is where the traffic campaign and the engagement campaign meet. The ad bought a comment. The follow-ask turns it into a follower." },
+      { t:"Deliver the gem", d:"'You got it. Find the 4 Stages of Ads deep dive below.' The link, nothing else in the way." },
+      { t:"Add the free gift and the audit line", d:"'Plus, I put together a free gift of thirty-plus trainings and guides.' Then who the audit is for, then the booking link.", w:"Instead of inviting them into Skool, I send the free gift that links to the audit at the top and bottom. Evergreen. Nothing to rewrite on October 8." },
+      { t:"Update and go live. Rename it after the keyword.", d:"Mine's called ADS. Then you can tell them apart in the list." }
+    ]},
+    { h:"Automation two · the free gift", i:"build once, use on every reel", items:[
+      { t:"New automation, keywords: GIFT, FREE, FREE GIFT", d:"A catch-all. Any reel, any time, 'comment GIFT' works without building a new flow." },
+      { t:"Deliver the free gift page", d:"'You got it. Here's a collection of thirty-plus trainings and guides: AI-powered content systems, Meta ads, Skool growth, Human Design and astrology for business.'" },
+      { t:"Add the 'when you need help implementing' line and the audit link", d:"I went back and forth on Skool versus the audit here. We're all in on the audits, so: the audit." },
+      { t:"Go live. Rename it 'Free gift'.", d:"Now every reel I make from here has a keyword ready before I hit post." }
+    ]}
+  ]}
+};
+
+var DONE = load("amanda.day2.checks", {});
+var TOTAL = 0;
+Object.keys(LISTS).forEach(function(k){ LISTS[k].groups.forEach(function(g){ TOTAL += g.items.length; }); });
+
+var BADGE = { key:"Key setting", trap:"Meta trap", opt:"Optional", paste:"Paste the list" };
+
+function renderList(k){
+  var L = LISTS[k], n = 0, html = "";
+  L.groups.forEach(function(g){
+    html += '<div class="area"><h3>' + esc(g.h) + (g.i ? ' <i>· ' + esc(g.i) + '</i>' : '') + '</h3><div class="items">';
+    g.items.forEach(function(it){
+      var id = k + "-" + n; n++;
+      var checked = !!DONE[id];
+      html += '<div class="it" data-id="' + id + '" data-checked="' + checked + '" data-open="false">' +
+        '<button class="it-row" type="button" aria-pressed="' + checked + '">' +
+          '<span class="box" aria-hidden="true"></span>' +
+          '<span><b><span class="n">' + (n < 10 ? "0" : "") + n + '</span>' + esc(it.t) + '</b>' + (it.d ? '<small>' + it.d + '</small>' : '') + '</span>' +
+          (it.b ? '<span class="badge ' + it.b + '">' + BADGE[it.b] + '</span>' : (it.w ? '<span class="badge">Why</span>' : '<span></span>')) +
+        '</button>' +
+        (it.w ? '<div class="it-why"><div><h4>Why</h4>' + esc(it.w) + '</div></div>' : '') +
+      '</div>';
+    });
+    html += '</div></div>';
+  });
+  html += '<div class="list-tools"><button type="button" data-all="' + k + '">Tick all</button><button type="button" data-reset="' + k + '">Reset this list</button></div>';
+  $("#list-" + k).innerHTML = html;
+  updateProgress(k);
+}
+
+function countList(k){
+  var total = 0, done = 0;
+  LISTS[k].groups.forEach(function(g){ g.items.forEach(function(){ if (DONE[k + "-" + total]) done++; total++; }); });
+  return { total:total, done:done };
+}
+
+function updateProgress(k){
+  var c = countList(k), pct = c.total ? Math.round(c.done / c.total * 100) : 0;
+  $("#pl-" + k).textContent = c.done + " of " + c.total + (c.done === c.total ? " · done" : "");
+  $("#pp-" + k).textContent = pct + "%";
+  $("#pb-" + k).style.width = pct + "%";
+  updateHero();
+}
+
+function updateHero(){
+  var done = 0, mini = "";
+  Object.keys(LISTS).forEach(function(k){
+    var c = countList(k); done += c.done;
+    var p = c.total ? Math.round(c.done / c.total * 100) : 0;
+    mini += '<div><span style="color:var(--txt2);font-family:var(--sans);font-size:13px">' + esc(LISTS[k].name) + '</span><span>' + c.done + '/' + c.total + '</span><i><b style="width:' + p + '%"></b></i></div>';
+  });
+  var pct = Math.round(done / TOTAL * 100);
+  $("#heroPct").textContent = pct + "%";
+  $("#heroUnit").textContent = done === TOTAL ? "all " + TOTAL + " steps done" : "of " + TOTAL + " steps done";
+  $("#heroMini").innerHTML = mini;
+  $("#navPct").textContent = pct + "% done";
+}
+
+Object.keys(LISTS).forEach(renderList);
+
+document.addEventListener("click", function(ev){
+  var row = ev.target.closest(".it-row");
+  if (row) {
+    var it = row.parentNode, id = it.getAttribute("data-id"), k = id.split("-")[0];
+    if (ev.target.closest(".badge") && it.querySelector(".it-why")) {
+      it.setAttribute("data-open", it.getAttribute("data-open") === "true" ? "false" : "true");
+      return;
+    }
+    var on = it.getAttribute("data-checked") === "true";
+    it.setAttribute("data-checked", String(!on));
+    row.setAttribute("aria-pressed", String(!on));
+    if (on) delete DONE[id]; else DONE[id] = 1;
+    save("amanda.day2.checks", DONE);
+    if (it.querySelector(".it-why") && !on) it.setAttribute("data-open", "true");
+    updateProgress(k);
+    return;
+  }
+  var all = ev.target.closest("[data-all]");
+  if (all) {
+    var k2 = all.getAttribute("data-all"), i = 0;
+    LISTS[k2].groups.forEach(function(g){ g.items.forEach(function(){ DONE[k2 + "-" + i] = 1; i++; }); });
+    save("amanda.day2.checks", DONE); renderList(k2); return;
+  }
+  var reset = ev.target.closest("[data-reset]");
+  if (reset) {
+    var k3 = reset.getAttribute("data-reset");
+    Object.keys(DONE).forEach(function(id){ if (id.indexOf(k3 + "-") === 0) delete DONE[id]; });
+    save("amanda.day2.checks", DONE); renderList(k3); return;
+  }
+});
+
+/* ---------------- country builder ---------------- */
+var COUNTRIES = [
+  { g:"The Big Four", list:["United States","Canada","United Kingdom","Australia"] },
+  { g:"English-speaking", list:["New Zealand","Ireland"] },
+  { g:"Northern & Western Europe", list:["Switzerland","Germany","Netherlands","Denmark","Norway","Sweden","Finland","Austria","Belgium","France","Luxembourg","Iceland"] },
+  { g:"Southern & Central Europe", list:["Italy","Spain","Portugal","Slovenia","Czech Republic","Poland"] },
+  { g:"Asia-Pacific · the ones I'd cut first", list:["Japan","Singapore","South Korea"] }
+];
+var ALL = []; COUNTRIES.forEach(function(g){ ALL = ALL.concat(g.list); });
+var BIG4 = COUNTRIES[0].list;
+var sel = load("amanda.day2.countries", null);
+if (!sel || !sel.length) sel = ALL.slice();
+
+function renderChips(){
+  var html = "";
+  COUNTRIES.forEach(function(g){
+    html += '<div class="grp"><i>' + esc(g.g) + '</i><div class="chips">';
+    g.list.forEach(function(c){
+      var on = sel.indexOf(c) > -1;
+      html += '<button class="chip" type="button" data-c="' + esc(c) + '" aria-pressed="' + on + '"><span class="r">' + (on ? "✓" : "+") + '</span>' + esc(c) + '</button>';
+    });
+    html += '</div></div>';
+  });
+  $("#chipGroups").innerHTML = html;
+  var ordered = ALL.filter(function(c){ return sel.indexOf(c) > -1; });
+  $("#countryOut").value = ordered.join("\n");
+  $("#cCount").textContent = ordered.length;
+  var preset = ordered.length === ALL.length ? "all" : (ordered.length === 4 && BIG4.every(function(c){ return ordered.indexOf(c) > -1; })) ? "big4" : (ordered.length === 1 && ordered[0] === "United States") ? "us" : "";
+  $$("[data-preset]").forEach(function(b){ b.setAttribute("aria-pressed", String(b.getAttribute("data-preset") === preset)); });
+  save("amanda.day2.countries", sel);
+}
+$("#chipGroups").addEventListener("click", function(ev){
+  var b = ev.target.closest(".chip"); if (!b) return;
+  var c = b.getAttribute("data-c"), i = sel.indexOf(c);
+  if (i > -1) sel.splice(i, 1); else sel.push(c);
+  renderChips();
+});
+$$("[data-preset]").forEach(function(b){
+  b.addEventListener("click", function(){
+    var p = b.getAttribute("data-preset");
+    sel = p === "all" ? ALL.slice() : p === "big4" ? BIG4.slice() : ["United States"];
+    renderChips();
+  });
+});
+$("#cCopy").addEventListener("click", function(){ copyText($("#countryOut").value, $("#cOk")); });
+renderChips();
+
+/* ---------------- reel tracker ---------------- */
+var TR_DEFAULT = [
+  { r:"4 Stages of Ads to Your Skool", k:"ADS", t:true, e:true, w:false },
+  { r:"Confessions of a Libra Rising", k:"CONFESS", t:true, e:true, w:false },
+  { r:"Destined for Wealth", k:"", t:true, e:true, w:false },
+  { r:"Money and Upbringing", k:"", t:true, e:false, w:false },
+  { r:"The tourist one", k:"", t:true, e:true, w:true }
+];
+var rows = load("amanda.day2.reels", null);
+if (!rows) rows = TR_DEFAULT.map(function(r){ return { r:r.r, k:r.k, t:r.t, e:r.e, w:r.w }; });
+
+function renderTracker(){
+  $("#trBody").innerHTML = rows.map(function(r, i){
+    return '<tr data-i="' + i + '">' +
+      '<td><input type="text" data-f="r" value="' + esc(r.r) + '" placeholder="Reel name or hook" aria-label="Reel name"></td>' +
+      '<td class="k"><input type="text" class="kw" data-f="k" value="' + esc(r.k) + '" placeholder="WORD" aria-label="Keyword"></td>' +
+      '<td class="c"><button class="tick" type="button" data-f="t" aria-pressed="' + !!r.t + '" aria-label="In traffic campaign"></button></td>' +
+      '<td class="c"><button class="tick" type="button" data-f="e" aria-pressed="' + !!r.e + '" aria-label="In engagement campaign"></button></td>' +
+      '<td class="c"><button class="tick win" type="button" data-f="w" aria-pressed="' + !!r.w + '" aria-label="Winner"></button></td>' +
+      '<td><button class="x" type="button" data-del="' + i + '" aria-label="Remove reel">×</button></td>' +
+    '</tr>';
+  }).join("");
+  var both = rows.filter(function(r){ return r.t && r.e; }).length;
+  var missing = rows.filter(function(r){ return (r.t || r.e) && !(r.t && r.e); }).length;
+  $("#trBoth").textContent = both; $("#trMissing").textContent = missing; $("#trTotal").textContent = rows.length;
+  save("amanda.day2.reels", rows);
+}
+$("#trBody").addEventListener("click", function(ev){
+  var del = ev.target.closest("[data-del]");
+  if (del) { rows.splice(parseInt(del.getAttribute("data-del"), 10), 1); renderTracker(); return; }
+  var t = ev.target.closest(".tick"); if (!t) return;
+  var i = parseInt(t.closest("tr").getAttribute("data-i"), 10), f = t.getAttribute("data-f");
+  rows[i][f] = !rows[i][f]; renderTracker();
+});
+$("#trBody").addEventListener("input", function(ev){
+  var inp = ev.target.closest("input"); if (!inp) return;
+  var i = parseInt(inp.closest("tr").getAttribute("data-i"), 10);
+  rows[i][inp.getAttribute("data-f")] = inp.value;
+  save("amanda.day2.reels", rows);
+});
+$("#trAdd").addEventListener("click", function(){
+  rows.push({ r:"", k:"", t:false, e:false, w:false }); renderTracker();
+  var last = $("#trBody tr:last-child input"); if (last) last.focus();
+});
+renderTracker();
+
+/* ---------------- DM script builder ---------------- */
+var DM_DEFAULT = { dKw:"ADS", dHandle:"@amandafielding.smith", dGem:"the 4 Stages of Ads deep dive", dGemUrl:"https://aefieldi.github.io/4-stages-of-ads/", dGiftUrl:"https://aefieldi.github.io/freegift/", dNextUrl:"https://cal.com/amanda-fielding-smith-ljdz7y/strategy-audit-open", dQual:"an established creator with proven client results" };
+var dmSaved = load("amanda.day2.dm", null);
+var DM_IDS = Object.keys(DM_DEFAULT);
+function readDM(){ var o = {}; DM_IDS.forEach(function(id){ o[id] = $("#" + id).value.trim(); }); return o; }
+function writeDM(o){ DM_IDS.forEach(function(id){ $("#" + id).value = o[id] == null ? "" : o[id]; }); }
+function linkify(s){ return esc(s).replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>'); }
+function dmBlocks(d){
+  var kw = (d.dKw || "WORD").toUpperCase();
+  var gem = d.dGem || "the thing";
+  var blocks = [
+    { lbl:"They comment", who:"them", txt:kw },
+    { lbl:"Public reply under the comment", who:"me", txt:"Sent it to your DMs! Check your requests if you don't see it." },
+    { lbl:"Opening DM · one button", who:"me", txt:"Hey! You commented " + kw + " so I'm guessing you want " + gem + ". Tap below and I'll send it over.", btn:"Send me the link" },
+    { lbl:"Ask for the follow · one button", who:"me", txt:"One thing first: follow me so the link doesn't get lost in requests, then tap the button.", btn:"I'm following" },
+    { lbl:"Deliver the gem", who:"me", txt:"You got it. Find " + gem + " here:\n" + (d.dGemUrl || "[link]") }
+  ];
+  if (d.dGiftUrl) blocks.push({ lbl:"The free gift", who:"me", txt:"Plus, I put together a free gift of thirty-plus of my trainings and guides: AI-powered content systems, Meta ads, Skool growth, Human Design and astrology for business.\n" + d.dGiftUrl });
+  if (d.dNextUrl) blocks.push({ lbl:"The next step", who:"me", txt:"And if you're " + (d.dQual || "ready for the next level") + " and want a custom strategy for your next level, I open a couple of 1:1 Strategy Audits each month. Book here:\n" + d.dNextUrl });
+  return blocks;
+}
+function renderDM(){
+  var d = readDM(), blocks = dmBlocks(d), html = "";
+  blocks.forEach(function(b){
+    html += '<span class="step-lbl">' + esc(b.lbl) + '</span>';
+    if (b.who === "them") html += '<div class="bub them">' + esc(b.txt) + '</div>';
+    else html += '<div class="bub me">' + linkify(b.txt) + (b.btn ? '<span class="btn-ish">' + esc(b.btn) + '</span>' : '') + '</div>';
+  });
+  $("#phoneStack").innerHTML = html;
+  save("amanda.day2.dm", d);
+}
+function dmText(){
+  return dmBlocks(readDM()).map(function(b){ return b.lbl.toUpperCase() + "\n" + b.txt + (b.btn ? "\n[Button: " + b.btn + "]" : ""); }).join("\n\n");
+}
+if (dmSaved) writeDM(dmSaved);
+DM_IDS.forEach(function(id){ $("#" + id).addEventListener("input", renderDM); });
+$("#dReset").addEventListener("click", function(){ writeDM(DM_DEFAULT); renderDM(); });
+$("#dCopy").addEventListener("click", function(){ copyText(dmText(), $("#dOk")); });
+renderDM();
+
+/* ---------------- worksheet ---------------- */
+var WS = load("amanda.day2.ws", {});
+["q1","q2","q3","q4"].forEach(function(id){ if (WS[id]) $("#" + id).value = WS[id]; });
+function commit(){
+  var a = $("#q1").value.trim(), b = $("#q2").value.trim(), c = $("#q3").value.trim(), d = $("#q4").value.trim();
+  WS = { q1:a, q2:b, q3:c, q4:d }; save("amanda.day2.ws", WS);
+  var out = $("#commitTxt");
+  if (!a && !b && !c && !d) { out.textContent = "Fill in the four questions and your commitment writes itself here."; return ""; }
+  var A = a || "[my gem and my word]", B = b || "[my countries]", C = c || "[my budget]", D = d || "[where the DM sends them]";
+  out.innerHTML = "I'm running a traffic and an engagement campaign for <b>" + esc(A) + "</b>, targeting <b>" + esc(B) + "</b>, at <b>" + esc(C) + "</b> a day each. The DM delivers the gem and sends them to <b>" + esc(D) + "</b>.";
+  return "I'm running a traffic and an engagement campaign for " + A + ", targeting " + B + ", at " + C + " a day each. The DM delivers the gem and sends them to " + D + ".";
+}
+["q1","q2","q3","q4"].forEach(function(id){ $("#" + id).addEventListener("input", commit); $("#" + id).addEventListener("change", commit); });
+$("#copyCommit").addEventListener("click", function(){ copyText(commit() || $("#commitTxt").textContent, $("#copyOk")); });
+commit();
+
+/* ---------------- sticky nav highlight ---------------- */
+(function(){
+  var links = $$(".snav a"), secs = links.map(function(a){ return $(a.getAttribute("href")); });
+  if (!("IntersectionObserver" in window)) return;
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      links.forEach(function(a){ a.classList.toggle("cur", a.getAttribute("href") === "#" + e.target.id); });
+    });
+  }, { rootMargin:"-40% 0px -55% 0px" });
+  secs.forEach(function(s){ if (s) io.observe(s); });
+})();
+})();
+</script>
+</body>
+</html>
